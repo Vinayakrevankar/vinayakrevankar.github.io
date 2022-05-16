@@ -1,0 +1,422 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>VR</title>
+
+	<script>
+		window.onload = preloadFunc();
+		
+	function preloadFunc () {
+			// var url_string = window.location.href
+			// var url = new URL(url_string);
+			// var urlWebId = url.searchParams.get("webid");
+			// if(urlWebId==null)
+			// { 
+			// 	let webid = Math.floor(Math.random() * (9999 - 500) ) + 15
+			// 	window.location.replace(`http://127.0.0.1:5500/about.html?webid=${webid}&bypass=1&mode=dark`);
+			// }
+			
+			document.write('<link rel="stylesheet" type="text/css" href="assets/styles/style.css"/>');
+			let mode = localStorage.getItem("mode");
+			
+			if(!mode ||  mode=="light")
+			{		
+					localStorage.setItem("mode",'light');
+			}else if(mode=="dark"){
+				document.write('<link rel="stylesheet" type="text/css" href="assets/styles/style-dark.css"/>');
+				localStorage.setItem("mode",'dark')
+				
+			}
+}
+		
+	</script>
+	<script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+	<style>
+	.badge1 {
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  margin-top: 5px;
+  border: 1px solid transparent;
+}
+.badge1.badge-default {
+  background-color: #edeff1;
+  color: #4d555f;
+  border-color: #4d555f;
+}
+.badge1.badge-primary {
+  background-color: #cdf0d7;
+  color: #2b9348;
+  border-color: #2b9348;
+}
+.badge1.badge-yellow {
+  background-color: #fef5d5;
+  color: #e8b906;
+  border-color: #e8b906;
+}
+.badge1.badge-orange {
+  background-color: #fef0ea;
+  color: #f86624;
+  border-color: #f86624;
+}
+.badge1.badge-red {
+  background-color: #fdeeef;
+  color: #ea3546;
+  border-color: #ea3546;
+}
+.badge1.badge-purple {
+  background-color: #e4d5f3;
+  color: #662e9b;
+  border-color: #662e9b;
+}
+.badge1.badge-blue {
+  background-color: #e4f5f8;
+  color: #43bccd;
+  border-color: #43bccd;
+}
+.badge1.badge-round {
+  border-radius: 1rem;
+}
+.badge1.badge-round.badge-tagged::before {
+  left: 0.875rem;
+}
+
+
+	</style>
+	<!-- Meta Data -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<meta name="description" content="Vinayak Revankar">
+	<meta name="keywords" content="vinayak, revankar">
+	
+	<link rel="apple-touch-icon" sizes="144x144" href="assets/images/favicons/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="assets/images/favicons/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="assets/images/favicons/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicons/apple-touch-icon-57x57.png">
+	
+
+	<link rel="shortcut icon" type="image/png" href="assets/images/favicon/favicon.png"/>
+</head>
+<body class="bg-triangles">
+    <!-- Preloader -->
+    <div class="preloader">
+	    <div class="preloader__wrap">
+		    <div class="circle-pulse">
+                <div class="circle-pulse__1"></div>
+                <div class="circle-pulse__2"></div>
+            </div>
+		    <div class="preloader__progress"><span></span></div>
+		</div>
+	</div>
+
+    <main class="main">
+	    <div class="container gutter-top">
+						
+		    <div class="row sticky-parent">
+				
+			    <!-- Sidebar -->
+                <aside class="col-12 col-md-12 col-xl-3">
+					
+				    <div class="sidebar box shadow pb-0 sticky-column">
+						<span style="height:20px;line-height:20px;width:20px;float: right;" id="modeLight" onclick="changeState();" >
+							<svg   focusable="false" xmlns="http://www.w3.org/2000/svg"  enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"><rect fill="none" height="24" width="24"></rect><path d="M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0 c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2 c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1 C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06 c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41 l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41 c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36 c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg></span>
+						<span style="height:20px;line-height:20px;width:20px;float: right;" id="modeDark" style="fill: whit;"onclick="changeState();">	
+							<svg style="fill: white;" focusable="false" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"><rect fill="none" height="24" width="24"></rect><path d="M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36c-0.98,1.37-2.58,2.26-4.4,2.26 c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></span>
+							
+						<svg class="avatar avatar--180" viewBox="0 0 188 188">
+                            <g class="avatar__box">
+                                <image xlink:href="assets/img/myphoto.jpg" height="100%" width="100%" />
+								
+						
+							</g>
+							
+                        </svg>
+							
+						
+						<div class="text-center">
+						    <h3 class="title title--h2 sidebar__user-name"><span class="weight--500">Vinayak</span> Revankar <br> 🇮🇳  </h3>
+							<!--| 🇺🇸 -->
+							<div class="badge badge--light">Consultant</div>
+								<hr>
+							<!--<span class="badge1 badge-primary">
+								Actively looking for Job
+							</span>-->
+							
+							<a href="./assets/Vinayak_Revankar.vcf" style="margin-top:25px;" id="saveContact"><span id="spanSaveContact">
+								Save contact
+							</span></a>
+							<!--img src="assets/images/vcf-open-file-format.svg" style="width:25px;height:25px;align-content:end"><a href="./assets/Vinayak_Revankar.vcf" rel="noreferrer"></a> -->
+							<!-- Social -->
+		                    <div class="social">
+		                        <!-- <a class="social__link" href="https://www.facebook.com/"><i class="font-icon icon-facebook"></i></a> -->
+		                        <a class="social__link" aria-label="Twitter" rel="noreferrer" href="https://github.com/Vinayakrevankar" target="_blank"><i class="font-icon icon-github"></i></a>
+		                        <a class="social__link" aria-label="Twitter" rel="noreferrer" href="https://in.linkedin.com/in/vinayakrevankar" target="_blank"><i class="font-icon icon-linkedin2"></i></a>
+								<a class="social__link" aria-label="Twitter" rel="noreferrer" href="https://join.skype.com/invite/rC9f81HfeksU" target="_blank"><i class="font-icon icon-skype"></i></a>
+							
+									
+							</div>
+						</div>
+						
+						<div class="sidebar__info box-inner box-inner--rounded">
+		                    <ul class="contacts-block">
+					         <!--   <li class="contacts-block__item" data-toggle="tooltip" data-placement="top" title="Birthday">
+							        <i class="font-icon icon-calendar"></i>Sep 16, 1996
+							    </li> -->
+						       
+						        <li class="contacts-block__item" data-toggle="tooltip" data-placement="top" title="E-mail">
+							        <a href="mailto:vinayakanrevankar@gmail.com" style="font-size:small"><i class="font-icon icon-envelope"></i> vinayakanrevankar@gmail.com</a>
+							    </li>
+						        <li class="contacts-block__item" data-toggle="tooltip" data-placement="top" title="Phone">
+							        <a href="tel:+919880403018"><i class="font-icon icon-phone"></i>+91 9880403018</a>
+							    </li>
+					        </ul>
+							
+						</div>
+					</div>	
+					<br>
+		        </aside>
+		        
+				<!-- Content -->
+		        <div class="col-12 col-md-12 col-xl-9">
+				    <div class="box shadow pb-0">
+					    <!-- Menu -->
+					   
+					    <!-- About -->
+						<div class="pb-0 pb-sm-2">
+		                    <h1 class="title title--h1 first-title title__separate">About Me</h1>
+						    <p id="aboutMe"></p>
+					    </div>
+						
+						<!-- What -->
+						<div class="pb-0">
+							<div class="row">
+							
+								<div class="col-12 col-lg-6">
+									<h2 class="title title--h3"><img class="title-icon" src="assets/icons/icon-experience.svg" alt="" /> Experience</h2>
+									<div class="timeline" id="ListOfCompanies">
+										<!-- Item -->
+										
+										
+									</div>
+								</div>
+								<div class="col-12 col-lg-6">
+									<h2 class="title title--h3"><img class="title-icon" src="assets/icons/icon-education.svg" alt="" /> Education</h2>
+									<div class="timeline">
+										<!-- Item -->
+										<article class="timeline__item">
+											<h5 class="title title--h5 timeline__title">Bachelor of Engineering (CSE)</h5>
+											<h5 class="title title--h5 timeline__title">KLS Gogte Institute of Technology,Belgaum</h5>
+											<span class="timeline__period">2015 — 2019</span>
+											<!-- <p class="timeline__description">Percentage/CGPA: 8.14</p> -->
+											<!-- <p class="timeline__description">Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur.</p> -->
+										</article>
+										
+										<!-- Item -->
+										<article class="timeline__item">
+											<h5 class="title title--h5 timeline__title">Higher Secondary Certificate</h5>
+											<h5 class="title title--h5 timeline__title">Govindram Seksaria Science PU College</h5>
+											
+											<span class="timeline__period">2013 — 2015</span>
+											<!-- <p class="timeline__description">Percentage/CGPA: 55.33%</p> -->
+											<!-- <p class="timeline__description">Ratione voluptatem sequi nesciunt, facere quisquams facere menda ossimus, omnis voluptas assumenda est omnis..</p> -->
+										</article>
+										
+										<!-- Item -->
+										<article class="timeline__item">
+											<h5 class="title title--h5 timeline__title">Secondary School Certificate</h5>
+											<h5 class="title title--h5 timeline__title">St. Xavier’s High school, Belgaum</h5>
+										
+											<span class="timeline__period">2003 — 2013</span>
+											<!-- <p class="timeline__description">Percentage/CGPA: 70.4%</p> -->
+										
+											<!-- <p class="timeline__description">Duis aute irure dolor in reprehenderit in voluptate, quila voluptas  mag odit aut fugit, sed consequuntur magni dolores eos.</p> -->
+										</article>
+									</div>	
+								</div>
+							</div>
+						</div>
+						<div class="box-inner box-inner--rounded">
+						    <div class="row">
+								<div class="col-12 col-lg-12">
+						            <h2 class="title title--h3">Technology/Tools</h2>
+									<div class="box box__second" id="listOfTechnology">
+										<!-- Progress -->
+									
+														
+											
+											
+									 <!-- Progress -->
+								
+						
+								 </div>
+								 
+                                </div>
+							    
+							</div>
+							
+						</div>
+					</div>
+					
+					 <footer class="footer">Copyright © 2022 </footer>
+		        </div>
+			</div>
+		</div>	
+    </main>
+
+    <div class="back-to-top"></div>
+
+    <!-- SVG masks -->
+    <svg class="svg-defs">
+        <clipPath id="avatar-box">
+            <path d="M1.85379 38.4859C2.9221 18.6653 18.6653 2.92275 38.4858 1.85453 56.0986.905299 77.2792 0 94 0c16.721 0 37.901.905299 55.514 1.85453 19.821 1.06822 35.564 16.81077 36.632 36.63137C187.095 56.0922 188 77.267 188 94c0 16.733-.905 37.908-1.854 55.514-1.068 19.821-16.811 35.563-36.632 36.631C131.901 187.095 110.721 188 94 188c-16.7208 0-37.9014-.905-55.5142-1.855-19.8205-1.068-35.5637-16.81-36.63201-36.631C.904831 131.908 0 110.733 0 94c0-16.733.904831-37.9078 1.85379-55.5141z"/>
+        </clipPath>
+        <clipPath id="avatar-hexagon">
+             <path d="M0 27.2891c0-4.6662 2.4889-8.976 6.52491-11.2986L31.308 1.72845c3.98-2.290382 8.8697-2.305446 12.8637-.03963l25.234 14.31558C73.4807 18.3162 76 22.6478 76 27.3426V56.684c0 4.6805-2.5041 9.0013-6.5597 11.3186L44.4317 82.2915c-3.9869 2.278-8.8765 2.278-12.8634 0L6.55974 68.0026C2.50414 65.6853 0 61.3645 0 56.684V27.2891z"/>
+        </clipPath>		
+    </svg>
+
+
+	<!-- JavaScripts -->
+	<script src="assets/js/jquery-3.4.1.min.js"></script>
+	<script src="assets/js/plugins.min.js"></script>
+    <script src="assets/js/common.js"></script>
+    
+	<script>
+	
+		function displaySaveContact(){
+				let isBigWindow = $(this).width() > 550;
+				if(isBigWindow){
+				
+					document.getElementById("saveContact").style.display = "none"; 
+					
+				}else{
+					
+					document.getElementById("saveContact").style.display = "block";
+					
+			
+				}
+			}
+	displaySaveContact();
+	window.addEventListener("resize", displaySaveContact)
+		let color = localStorage.getItem("mode") == "light" ? "black" : "white"; 
+	document.getElementById("spanSaveContact").style.color  = color;
+
+	document.getElementById("modeLight").style.display = localStorage.getItem("mode")=='light' ? "block" : "none";
+  	document.getElementById("modeDark").style.display = localStorage.getItem("mode")=='dark' ? "block" : "none";;
+	function changeState (){
+        let mode = localStorage.getItem("mode");
+        if(mode=="light"){
+            localStorage.setItem("mode",'dark');
+			
+            window.location.reload()
+        }else if(mode=="dark"){
+            localStorage.setItem("mode",'light');
+            window.location.reload()
+        }
+    }
+	$( document ).ready(function() {
+	function monthDiff(d1, d2) {
+var months;
+months = (d2. getFullYear() - d1. getFullYear()) * 12;
+months -= d1. getMonth();
+months += d2. getMonth();
+return months <= 0 ? 0 : months+1;
+}
+let d1 = new Date('2019-06-01')
+let d2 = new Date()
+let res = monthDiff(d1,d2);
+aboutMe = `I am Backend Developer from Belgaum, India, working in web development. I enjoy turning complex problems into simple, beautiful. Having <b>${Math.floor(res/12)}.${res%12} years <\/b> of total experience, working with large teams spread across multiple time zones and countries. Dynamic team player who is consistently motivated towards success and completion of projects with an ability to work independently and also a quick learner who can swiftly adapt to new challenges using interpersonal skills to achieve the goals of a company that focuses on rapid growth.`;
+
+
+let multiplePosition = ({role, duration, description}) => `
+											<h5 class="title title--h5 timeline__title">${role}<\/h5>
+											<span class="timeline__period">${duration}<\/span>
+											<p class="timeline__description">${description}<\/p>`
+
+    const myDetails = {
+   "aboutMe": aboutMe,
+   "company":[
+      {
+         "name":"Capgemini Technology Services India Limited",
+         "details":[{
+			"role":"Consultant",
+               "duration":"01-APRIL-2022 — PRESENT",
+			   "description": `Part of Middleware development Team for design and development of API for food restaurant for five modules using NodeJS, Serverless Frameworks , AWS  ( Lambda, API Gateway, CloudWatch, Dynamodb, SQS, S3 ) and Azure DevOps.
+\n Developed a tool for internal use which will help the developer for easy navigation to AWS services.`
+
+		 },
+            {
+               "role":"Associate Consultant",
+               "duration":"20-AUG-2021 — 31-MAR-2022",
+               "description":"Part of Middleware Team for design and development of API for food restaurant using NodeJS and AWS Services."
+            }
+         ]
+      },
+      {
+         "name":"Neviton Softech Private Limited",
+         "details":[
+            {
+               "role":"Associate Software Engineer",
+               "duration":"01-JUN-2019 — 30-JULY-2021",
+               "description":"Advanced Product and Quality Planning development team to design and develop an integrated software solution for the Aircraft Manufacturing Industry using NodeJS and other technologies."
+            },
+            {
+               "role":"Intern",
+               "duration":"15-APR-2019 — 31-MAY-2019",
+               "description":"Exposure to HTML, CSS, JavaScript, NodeJS. Knowledge of database (MySQL, SQL SERVER) Familiarity with software version control: Git, GitHub Agile Software Development methodology concepts Complete programming assignment using a JavaScript."
+            }
+         ]
+      }
+   ],
+   "technologies":[
+      "Javascript",
+      "NodeJS",
+      "Mocha",
+	  "Azure DevOps",
+      "ExpressJS",
+      "ES6",
+	  "Serverless",
+      "jQuery",
+      "Bootstrap",
+      "Python",
+      "HTML",
+      "MySQL",
+      "MSSQL",
+      "Java",
+      "Android",
+      "Studio",
+      "CSS",
+      "PHP",
+      "C#",
+      "JIRA",
+      "Github",
+      "VS",
+      "Code",
+      "Postman"
+   ]
+}
+	$("#listOfTechnology").append(myDetails.technologies.map(val=>`<span class='badge1 badge-primary'>${val}<\/span>`).join("\n"));
+	$("#aboutMe").append(myDetails.aboutMe);
+	let listOfCompanies = myDetails.company.map(val=> {
+	let dat = `<article class="timeline__item"><h5 class="title title--h5 timeline__title"><u>${val.name}<\/u><\/h5><br>`
+	dat += val.details.map(val1 => multiplePosition(val1)).join("\n")+"<\/article>";
+	return dat;
+	}).join("\n");
+	console.log("---",listOfCompanies)
+	$("#ListOfCompanies").append(listOfCompanies);
+	});
+	</script>
+
+
+
+</body>
+</html>
