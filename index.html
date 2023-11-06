@@ -143,9 +143,8 @@
 							
 						
 						<div class="text-center">
-						    <h3 class="title title--h2 sidebar__user-name"><span class="weight--500">Vinayak</span> Revankar <br> 🇮🇳  </h3>
-							<!--| 🇺🇸 -->
-							<div class="badge badge--light">Consultant - Software Engineer Lead</div>
+						    <h3 class="title title--h2 sidebar__user-name"><span class="weight--500">Vinayak</span> Revankar 
+							<div>Consultant <br><hr> Software Engineer Lead</div>
 								<hr>
 							<!--<span class="badge1 badge-primary">
 								Actively looking for Job
@@ -334,8 +333,16 @@ return months <= 0 ? 0 : months+1;
 let d1 = new Date('2019-06-01')
 let d2 = new Date()
 let res = monthDiff(d1,d2);
-aboutMe = `I am Backend Developer from Belgaum, India, working in web development. I enjoy turning complex problems into simple, beautiful. Having <b>${Math.floor(res/12)}.${res%12} years <\/b> of total experience, working with large teams spread across multiple time zones and countries. Dynamic team player who is consistently motivated towards success and completion of projects with an ability to work independently and also a quick learner who can swiftly adapt to new challenges using interpersonal skills to achieve the goals of a company that focuses on rapid growth.`;
-
+aboutMe = `Meticulous and action-oriented developer with ${Math.floor(res/12)}.${res%12} years of experience in the Software
+development space. With a solid background in programming, software architecture, and project
+management, I have the ability to lead a team of developers to create and maintain innovative,
+reliable, and scalable software applications. My technical expertise includes proficiency in a
+variety of programming languages, such as JavaScript, YAML, Python, and Java, as well as
+experience in software development frameworks such as Node.js, Serverless, and ExpressJS.
+Apart from this, I have extensive experience with AWS cloud platform and services. In addition
+to my technical skills, taking ownership of the projects undertaken, communication skills and
+leadership skills are also some of the areas where my strengths lie.`;
+	
 
 let multiplePosition = ({role, duration, description}) => `
 											<h5 class="title title--h5 timeline__title">${role}<\/h5>
@@ -348,17 +355,12 @@ let multiplePosition = ({role, duration, description}) => `
       {
          "name":"Capgemini Technology Services India Limited",
          "details":[{
-			"role":"Consultant",
-               "duration":"01-APRIL-2022 — PRESENT",
+			"role":"Consultant - Software Engineer Lead",
+               "duration":"20-AUG-2022 — PRESENT",
 			   "description": `Part of Middleware development Team for design and development of API for food restaurant for five modules using NodeJS, Serverless Frameworks , AWS  ( Lambda, API Gateway, CloudWatch, Dynamodb, SQS, S3 ) and Azure DevOps.
 \n Developed a tool for internal use which will help the developer for easy navigation to AWS services.`
 
-		 },
-            {
-               "role":"Associate Consultant",
-               "duration":"20-AUG-2021 — 31-MAR-2022",
-               "description":"Part of Middleware Team for design and development of API for food restaurant using NodeJS and AWS Services."
-            }
+		 }
          ]
       },
       {
