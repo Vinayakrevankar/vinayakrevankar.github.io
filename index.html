@@ -102,6 +102,18 @@
 		.badge1.badge-round.badge-tagged::before {
 			left: 0.875rem;
 		}
+		@media screen and (min-width: 768px) {
+		.container_project {
+			flex-direction: row;
+			align-items: center;
+		}
+		.image_project {
+			margin-right: 30px;
+		}
+		.content_project {
+			flex: 1;
+		}
+	}
 	</style>
 	<!-- Meta Data -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -174,7 +186,8 @@
 
 						<div class="text-center">
 							<h3 class="title title--h2 sidebar__user-name"><span class="weight--500">Vinayak</span>
-								Revankar <br> 🇮🇳|🇺🇸 </h3>
+								Revankar </h3> 
+								<!-- <br> 🇮🇳|🇺🇸 </h3> -->
 							<div> Master's in Computer Science at Worcester Polytechnic Institute 2026 <br></div>
 							<hr>
 							<span class="badge1 badge-primary">
@@ -185,10 +198,8 @@
 									id="spanSaveContact">
 									Save contact
 								</span></a>
-							<!--img src="assets/images/vcf-open-file-format.svg" style="width:25px;height:25px;align-content:end"><a href="./assets/Vinayak_Revankar.vcf" rel="noreferrer"></a> -->
 							<!-- Social -->
 							<div class="social">
-								<!-- <a class="social__link" href="https://www.facebook.com/"><i class="font-icon icon-facebook"></i></a> -->
 								<a class="social__link" aria-label="Twitter" rel="noreferrer"
 									href="https://github.com/Vinayakrevankar" target="_blank"><i
 										class="font-icon icon-github"></i></a>
@@ -205,9 +216,6 @@
 
 						<div class="sidebar__info box-inner box-inner--rounded">
 							<ul class="contacts-block">
-								<!--   <li class="contacts-block__item" data-toggle="tooltip" data-placement="top" title="Birthday">
-							        <i class="font-icon icon-calendar"></i>Sep 16, 1996
-							    </li> -->
 
 								<li class="contacts-block__item" data-toggle="tooltip" data-placement="top"
 									title="E-mail">
@@ -217,7 +225,6 @@
 								<li class="contacts-block__item" data-toggle="tooltip" data-placement="top"
 									title="Phone">
 									<a href="tel:+16177929284"><i class="font-icon icon-phone"></i>+1 (617) 792-9284</a>
-									<!-- 							        <a href="tel:+919880403018"><i class="font-icon icon-phone"></i>+91 (988)040-3018</a> -->
 								</li>
 							</ul>
 
@@ -245,8 +252,6 @@
 									<h2 class="title title--h3"><img class="title-icon"
 											src="assets/icons/icon-experience.svg" alt="" /> Experience</h2>
 									<div class="timeline" id="ListOfCompanies">
-										<!-- Item -->
-
 
 									</div>
 								</div>
@@ -280,7 +285,6 @@
 
 											<span class="timeline__period">2013 — 2015</span>
 											<!-- <p class="timeline__description">Percentage/CGPA: 55.33%</p> -->
-											<!-- <p class="timeline__description">Ratione voluptatem sequi nesciunt, facere quisquams facere menda ossimus, omnis voluptas assumenda est omnis..</p> -->
 										</article>
 
 										<!-- Item -->
@@ -293,7 +297,6 @@
 											<span class="timeline__period">2003 — 2013</span>
 											<!-- <p class="timeline__description">Percentage/CGPA: 70.4%</p> -->
 
-											<!-- <p class="timeline__description">Duis aute irure dolor in reprehenderit in voluptate, quila voluptas  mag odit aut fugit, sed consequuntur magni dolores eos.</p> -->
 										</article>
 									</div>
 								</div>
@@ -304,13 +307,6 @@
 								<div class="col-12 col-lg-12">
 									<h2 class="title title--h3">Technology/Tools</h2>
 									<div class="box box__second" id="listOfTechnology">
-										<!-- Progress -->
-
-
-
-
-										<!-- Progress -->
-
 
 									</div>
 
@@ -321,104 +317,9 @@
 						</div>
 						<br>
 						<div id="Projects">
-							<!-- About -->
 							<h2 class="title title--h3">Projects</h2>
 
-							<div class="box-inner box-inner--rounded">
-								<!-- <div class="gutter-sizer"></div> -->
-								<!-- Item 1 -->
-								<div class="container" style="display: flex;align-items: center;">
-									<div class="image">
-										<img src="./assets/images/gitlibrary_logo.webp" alt="GIT Library"
-											style="flex: 0 0 auto;width: 100px;height: 100px; ">
-									</div>
-									<div class="content" style="flex: 1; margin-left: 30px;">
-										<h4 class="title">GIT Library</h4>
-										Users can seamlessly manage their borrowed books through our system, which
-										includes features such as checking issued books, monitoring late fees, and
-										renewing books as needed. With our integrated Paytm payment gateway, users can
-										conveniently settle any fines incurred, ensuring a hassle-free experience.
-										<br>
-										<div class="right-text" style="float: right;">
-											<h6><a
-													href="https://play.google.com/store/apps/details?id=com.gitbelgaum.gitlibrary.gitlibrary&hl=en_US">Play
-													Store</a></h6>
-
-										</div>
-
-									</div>
-								</div>
-								<hr>
-								<div class="container" style="display: flex;align-items: center;">
-									<div class="image">
-										<img src="./assets/images/kohaopac_logo.webp" alt="Koha OPAC"
-											style="flex: 0 0 auto;width: 100px;height: 100px; ">
-									</div>
-									<div class="content" style="flex: 1; margin-left: 30px;">
-										<h4 class="title">Koha-Opac</h4>
-
-										Developed a global library application enabling librarians to register colleges
-										and generate unique library codes, which users utilize alongside their username
-										and password for authentication. Users can then access features such as checking
-										issued books and viewing late fee amounts.
-										<br>
-										<div class="right-text" style="float: right;">
-											<h6><a
-													href="https://play.google.com/store/apps/details?id=com.lisacademy.org.kohaopac&hl=en_US">Play
-													Store</a></h6>
-										</div>
-
-									</div>
-								</div>
-								<hr>
-								<div class="container" style="display: flex;align-items: center;">
-									<div class="image">
-										<img src="./assets/images/giftWise_logo.png" alt="GiftWise."
-											style="flex: 0 0 auto;width: 100px;height: 100px; ">
-									</div>
-									<div class="content" style="flex: 1; margin-left: 30px;">
-
-										<h4 class="title">GiftWise.</h4>
-
-										<!-- Add other content here -->
-										Gift Card Management System simplifies gift card purchases, rewards users with
-										each transaction, and enables easy account management. Customers can buy cards
-										online, earn rewards, and enjoy discounts. The admin portal tracks balances,
-										transactions, and rewards, while offering exclusive discounts. Automated email
-										updates ensure seamless purchase confirmation.
-										<br>
-										<div class="right-text" style="float: right;">
-											<h6><a
-													href="https://github.com/Vinayakrevankar/GiftCardManagementSystem">GitHub</a>
-											</h6>
-
-										</div>
-
-									</div>
-								</div>
-
-								<div class="container" style="display: flex;align-items: center;">
-									<div class="image">
-										<img src="./assets/images/awaitero_logo.png" alt="GiftWise."
-											style="flex: 0 0 auto;width: 100px;height: 100px; ">
-									</div>
-									<div class="content" style="flex: 1; margin-left: 30px;">
-
-										<h4 class="title">Awaitero</h4>
-
-										<!-- Add other content here -->
-										Awaitero's cutting-edge digital menu, ordering, and billing software. Say goodbye to traditional menus and embrace our QR-based system for maximum customer safety. Enable seamless dine-in ordering by simply scanning a QR code at the restaurant.
-										<br>
-										<div class="right-text" style="float: right;">
-											<h6><a
-													href="https://github.com/Vinayakrevankar/Awaitero">GitHub</a>
-											</h6>
-
-										</div>
-
-									</div>
-								</div>
-
+							<div class="box-inner box-inner--rounded" id="projectContent">
 
 							</div>
 						</div>
@@ -456,7 +357,23 @@
 	<script src="assets/js/common.js"></script>
 
 	<script>
+		function generateProjectContainer ({imageSrc, projectTitle,description, link}){ 
 
+			return 	`<div class="container_project">
+									<div class="image_project">
+										<img src="${imageSrc}" alt="GIT Library" style="flex: 0 0 auto;width: 100px;height: 100px;margin-bottom: 5px ">
+									</div>
+									
+									<div class="content_project">
+										<h4 class="title">${projectTitle}</h4>
+										${description}
+									</div>
+									${Object.keys(link).map( p =>`<div style="float:right;">
+										<h6><a href="${link[p]}">${p.replace("_"," ")}</a></h6>
+									</div>`).join("\n")}
+								</div>
+				<hr style="margin-top: 25px;">`
+		}
 		function displaySaveContact() {
 			let isBigWindow = $(this).width() > 550;
 			if (isBigWindow) {
@@ -470,6 +387,49 @@
 
 			}
 		}
+		let project = [{
+			imageSrc: "./assets/images/gitlibrary_logo.webp",
+			projectTitle: "GIT Library",
+			description: "Users can seamlessly manage their borrowed books through our system, which includes features such as checking issued books, monitoring late fees, and renewing books as needed. With our integrated Paytm payment gateway, users can conveniently settle any fines incurred, ensuring a hassle-free experience.",
+			link: {
+				"Play_Store": "https://play.google.com/store/apps/details?id=com.gitbelgaum.gitlibrary.gitlibrary&amp;hl=en_US"
+			}
+		},{
+			imageSrc: "./assets/images/kohaopac_logo.webp",
+			projectTitle: "Koha-Opac",
+			description: `Developed a global library application enabling librarians to register colleges
+										and generate unique library codes, which users utilize alongside their username
+										and password for authentication. Users can then access features such as checking
+										issued books and viewing late fee amounts.`,
+			link: {
+				"Play_Store": "https://play.google.com/store/apps/details?id=com.lisacademy.org.kohaopac&hl=en_US"
+			}
+		},
+		{
+			imageSrc: "./assets/images/giftWise_logo.png",
+			projectTitle: "GiftWise.",
+			description: `Gift Card Management System simplifies gift card purchases, rewards users with
+										each transaction, and enables easy account management. Customers can buy cards
+										online, earn rewards, and enjoy discounts. The admin portal tracks balances,
+										transactions, and rewards, while offering exclusive discounts. Automated email
+										updates ensure seamless purchase confirmation.`,
+			link: {
+				"GitHub": "https://github.com/Vinayakrevankar/GiftCardManagementSystem"
+			}
+		},
+		{
+			imageSrc: "./assets/images/awaitero_logo.png",
+			projectTitle: "Awaitero",
+			description: `Awaitero's cutting-edge digital menu, ordering, and billing software. Say goodbye to traditional menus and embrace our QR-based system for maximum customer safety. Enable seamless dine-in ordering by simply scanning a QR code at the restaurant.`,
+			link: {
+				"GitHub": "https://github.com/Vinayakrevankar/Awaitero"
+			}
+		}
+		
+	]
+		project.forEach(val=>{
+			$('#projectContent').append(generateProjectContainer(val))
+		})
 		displaySaveContact();
 		window.addEventListener("resize", displaySaveContact)
 		let color = localStorage.getItem("mode") == "light" ? "black" : "white";
