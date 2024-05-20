@@ -42,79 +42,9 @@
 	</script>
 	<script src="https://code.jquery.com/jquery-3.6.0.js"
 		integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-	<style>
-		.badge1 {
-			display: inline-block;
-			padding: 0.5rem 0.75rem;
-			font-size: 0.75rem;
-			font-weight: bold;
-			border-radius: 0.5rem;
-			margin-top: 5px;
-			border: 1px solid transparent;
-		}
+	<link rel="stylesheet" type="text/css" href="assets/styles/custom-style.css" />
 
-		.badge1.badge-default {
-			background-color: #edeff1;
-			color: #4d555f;
-			border-color: #4d555f;
-		}
 
-		.badge1.badge-primary {
-			background-color: #cdf0d7;
-			color: #2b9348;
-			border-color: #2b9348;
-		}
-
-		.badge1.badge-yellow {
-			background-color: #fef5d5;
-			color: #e8b906;
-			border-color: #e8b906;
-		}
-
-		.badge1.badge-orange {
-			background-color: #fef0ea;
-			color: #f86624;
-			border-color: #f86624;
-		}
-
-		.badge1.badge-red {
-			background-color: #fdeeef;
-			color: #ea3546;
-			border-color: #ea3546;
-		}
-
-		.badge1.badge-purple {
-			background-color: #e4d5f3;
-			color: #662e9b;
-			border-color: #662e9b;
-		}
-
-		.badge1.badge-blue {
-			background-color: #e4f5f8;
-			color: #43bccd;
-			border-color: #43bccd;
-		}
-
-		.badge1.badge-round {
-			border-radius: 1rem;
-		}
-
-		.badge1.badge-round.badge-tagged::before {
-			left: 0.875rem;
-		}
-		@media screen and (min-width: 768px) {
-		.container_project {
-			flex-direction: row;
-			align-items: center;
-		}
-		.image_project {
-			margin-right: 30px;
-		}
-		.content_project {
-			flex: 1;
-		}
-	}
-	</style>
 	<!-- Meta Data -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -176,28 +106,23 @@
 
 						<svg class="avatar avatar--180" viewBox="0 0 188 188">
 							<g class="avatar__box">
-								<image xlink:href="assets/img/myphoto.jpg" height="100%" width="100%" />
-
-
+								<image xlink:href="assets/img/myphotoV1.jpg" height="100%" width="100%" />
 							</g>
-
 						</svg>
-
-
 						<div class="text-center">
 							<h3 class="title title--h2 sidebar__user-name"><span class="weight--500">Vinayak</span>
-								Revankar </h3> 
-								<!-- <br> 🇮🇳|🇺🇸 </h3> -->
+								Revankar </h3>
+							<!-- <br> 🇮🇳|🇺🇸 </h3> -->
 							<div> Master's in Computer Science at Worcester Polytechnic Institute 2026 <br></div>
 							<hr>
 							<span class="badge1 badge-primary">
-								Actively looking for internship for Spring 2025
+								Actively looking for internship for Spring 2025 <br>
+								<!-- <button class="badge1 badge-primary" style="color: black;"
+									onclick="window.open(``)"><i
+										class="font-icon icon-download"></i> Download CV </a></button> -->
+
 							</span>
 
-							<a href="./assets/Vinayak_Revankar.vcf" style="margin-top:25px;" id="saveContact"><span
-									id="spanSaveContact">
-									Save contact
-								</span></a>
 							<!-- Social -->
 							<div class="social">
 								<a class="social__link" aria-label="Twitter" rel="noreferrer"
@@ -226,6 +151,10 @@
 									title="Phone">
 									<a href="tel:+16177929284"><i class="font-icon icon-phone"></i>+1 (617) 792-9284</a>
 								</li>
+								<a href="./assets/Vinayak_Revankar.vcf" style="margin-top:25px;"
+									id="saveContact"><span id="spanSaveContact">
+										Save contact
+									</span></a>
 							</ul>
 
 						</div>
@@ -284,7 +213,6 @@
 												College, Belgaum, KA, India</h5>
 
 											<span class="timeline__period">2013 — 2015</span>
-											<!-- <p class="timeline__description">Percentage/CGPA: 55.33%</p> -->
 										</article>
 
 										<!-- Item -->
@@ -295,8 +223,6 @@
 												Belgaum, KA, India</h5>
 
 											<span class="timeline__period">2003 — 2013</span>
-											<!-- <p class="timeline__description">Percentage/CGPA: 70.4%</p> -->
-
 										</article>
 									</div>
 								</div>
@@ -325,7 +251,6 @@
 						</div>
 					</div>
 
-					<footer class="footer">Copyright © 2024 </footer>
 				</div>
 
 
@@ -355,79 +280,25 @@
 	<script src="assets/js/jquery-3.4.1.min.js"></script>
 	<script src="assets/js/plugins.min.js"></script>
 	<script src="assets/js/common.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/constant/constant.js"></script>
 
-	<script>
-		function generateProjectContainer ({imageSrc, projectTitle,description, link}){ 
+<script>
+		function generateProjectContainer({ imageSrc, projectTitle, description, link }) {
 
-			return 	`<div class="container_project">
-									<div class="image_project">
-										<img src="${imageSrc}" alt="GIT Library" style="flex: 0 0 auto;width: 100px;height: 100px;margin-bottom: 5px ">
-									</div>
-									
-									<div class="content_project">
-										<h4 class="title">${projectTitle}</h4>
-										${description}
-									</div>
-									${Object.keys(link).map( p =>`<div style="float:right;">
-										<h6><a href="${link[p]}">${p.replace("_"," ")}</a></h6>
-									</div>`).join("\n")}
-								</div>
-				<hr style="margin-top: 25px;">`
-		}
-		function displaySaveContact() {
-			let isBigWindow = $(this).width() > 550;
-			if (isBigWindow) {
-
-				document.getElementById("saveContact").style.display = "none";
-
-			} else {
-
-				document.getElementById("saveContact").style.display = "block";
-
-
-			}
-		}
-		let project = [{
-			imageSrc: "./assets/images/gitlibrary_logo.webp",
-			projectTitle: "GIT Library",
-			description: "Users can seamlessly manage their borrowed books through our system, which includes features such as checking issued books, monitoring late fees, and renewing books as needed. With our integrated Paytm payment gateway, users can conveniently settle any fines incurred, ensuring a hassle-free experience.",
-			link: {
-				"Play_Store": "https://play.google.com/store/apps/details?id=com.gitbelgaum.gitlibrary.gitlibrary&amp;hl=en_US"
-			}
-		},{
-			imageSrc: "./assets/images/kohaopac_logo.webp",
-			projectTitle: "Koha-Opac",
-			description: `Developed a global library application enabling librarians to register colleges
-										and generate unique library codes, which users utilize alongside their username
-										and password for authentication. Users can then access features such as checking
-										issued books and viewing late fee amounts.`,
-			link: {
-				"Play_Store": "https://play.google.com/store/apps/details?id=com.lisacademy.org.kohaopac&hl=en_US"
-			}
-		},
-		{
-			imageSrc: "./assets/images/giftWise_logo.png",
-			projectTitle: "GiftWise.",
-			description: `Gift Card Management System simplifies gift card purchases, rewards users with
-										each transaction, and enables easy account management. Customers can buy cards
-										online, earn rewards, and enjoy discounts. The admin portal tracks balances,
-										transactions, and rewards, while offering exclusive discounts. Automated email
-										updates ensure seamless purchase confirmation.`,
-			link: {
-				"GitHub": "https://github.com/Vinayakrevankar/GiftCardManagementSystem"
-			}
-		},
-		{
-			imageSrc: "./assets/images/awaitero_logo.png",
-			projectTitle: "Awaitero",
-			description: `Awaitero's cutting-edge digital menu, ordering, and billing software. Say goodbye to traditional menus and embrace our QR-based system for maximum customer safety. Enable seamless dine-in ordering by simply scanning a QR code at the restaurant.`,
-			link: {
-				"GitHub": "https://github.com/Vinayakrevankar/Awaitero"
-			}
+			return `<div class="container_project">
+				<div class="image_project">
+					<img src="${imageSrc}" alt="${projectTitle}" style="width: 100px;height: 100px;margin-right:15px">
+				</div>
+				<div class="text_project">
+					<h4 class="title">${projectTitle}</h4>
+					<p>${description} <br> ${Object.keys(link).map(p => `<a href="${link[p]}">${p.replace("_", " ")}</a>`).join("\n")}</p>
+					
+				</div>
+			</div><hr>`
 		}
 		
-	]
-		project.forEach(val=>{
+		projects.forEach(val => {
 			$('#projectContent').append(generateProjectContainer(val))
 		})
 		displaySaveContact();
@@ -437,110 +308,21 @@
 
 		document.getElementById("modeLight").style.display = localStorage.getItem("mode") == 'light' ? "block" : "none";
 		document.getElementById("modeDark").style.display = localStorage.getItem("mode") == 'dark' ? "block" : "none";;
-		function changeState() {
-			let mode = localStorage.getItem("mode");
-			if (mode == "light") {
-				localStorage.setItem("mode", 'dark');
-
-				window.location.reload()
-			} else if (mode == "dark") {
-				localStorage.setItem("mode", 'light');
-				window.location.reload()
-			}
-		}
+		
 		$(document).ready(function () {
-			function monthDiff(d1, d2) {
-				var months;
-				months = (d2.getFullYear() - d1.getFullYear()) * 12;
-				months -= d1.getMonth();
-				months += d2.getMonth();
-				return months <= 0 ? 0 : months + 1;
-			}
-			let d1 = new Date('2019-04-01')
-			let d2 = new Date('2023-12-29')
-			let res = monthDiff(d1, d2);
-			aboutMe = `Meticulous and action-oriented developer with <b>${Math.floor(res / 12)}.${res % 12} years <\/b> of experience in the Software
-development space. With a solid background in programming, software architecture, and project
-management, I have the ability to lead a team of developers to create and maintain innovative,
-reliable, and scalable software applications. My technical expertise includes proficiency in a
-variety of programming languages, such as JavaScript, YAML, Python, and Java, as well as
-experience in software development frameworks such as Node.js, Serverless, and ExpressJS.
-Apart from this, I have extensive experience with AWS cloud platform and services. In addition
-to my technical skills, taking ownership of the projects undertaken, communication skills, and
-leadership skills are also some of the areas where my strengths lie.`
-
-
+	
 			let multiplePosition = ({ role, duration, description }) => `
 											<h5 class="title title--h5 timeline__title">${role}<\/h5>
 											<span class="timeline__period">${duration}<\/span>
 											<p class="timeline__description">${description}<\/p>`
 
-			const myDetails = {
-				"aboutMe": aboutMe,
-				"company": [
-					{
-						"name": "Capgemini Technology Services India Limited",
-						"details": [{
-							"role": "Consultant - Software Engineer Lead",
-							"duration": "20-AUG-2021 — 29-DEC-2023",
-							"description": `Part of Middleware development Team for design and development of API for food restaurant for five modules using NodeJS, Serverless Frameworks , AWS  ( Lambda, API Gateway, CloudWatch, Dynamodb, SQS, S3 ) and Azure DevOps.
-\n Developed a tool for internal use which will help the developer for easy navigation to AWS services.`
-
-						}
-						]
-					},
-					{
-						"name": "Neviton Softech Private Limited",
-						"details": [
-							{
-								"role": "Associate Software Engineer",
-								"duration": "01-JUN-2019 — 30-JULY-2021",
-								"description": "Advanced Product and Quality Planning development team to design and develop an integrated software solution for the Aircraft Manufacturing Industry using NodeJS and other technologies."
-							},
-							{
-								"role": "Intern",
-								"duration": "15-APR-2019 — 31-MAY-2019",
-								"description": "Exposure to HTML, CSS, JavaScript, NodeJS. Knowledge of database (MySQL, SQL SERVER) Familiarity with software version control: Git, GitHub Agile Software Development methodology concepts Complete programming assignment using a JavaScript."
-							}
-						]
-					}
-				],
-				"technologies": [
-					"Javascript",
-					"NodeJS",
-					"Serverless",
-					"Mocha",
-					"TypeScript",
-					"Azure DevOps",
-					"ExpressJS",
-					"ES6",
-					"jQuery",
-					"Bootstrap",
-					"Python",
-					"HTML",
-					"MySQL",
-					"MSSQL",
-					"Java",
-					"Android Studio",
-					"CSS",
-					"PHP",
-					"C#",
-					"JIRA",
-					"GitHub",
-					"VS Code",
-					"Swagger",
-					"Postman",
-					"Lucid Chart"
-				]
-			}
-			$("#listOfTechnology").append(myDetails.technologies.map(val => `<span class='badge1 badge-primary'>${val}<\/span>`).join("\n"));
-			$("#aboutMe").append(myDetails.aboutMe);
-			let listOfCompanies = myDetails.company.map(val => {
+			$("#listOfTechnology").append(CV.technologies.map(val => `<span class='badge1 badge-primary'>${val}<\/span>`).join("\n"));
+			$("#aboutMe").append(CV.aboutMe);
+			let listOfCompanies = CV.company.map(val => {
 				let dat = `<article class="timeline__item"><h5 class="title title--h5 timeline__title"><u>${val.name}<\/u><\/h5><br>`
 				dat += val.details.map(val1 => multiplePosition(val1)).join("\n") + "<\/article>";
 				return dat;
 			}).join("\n");
-			console.log("---", listOfCompanies)
 			$("#ListOfCompanies").append(listOfCompanies);
 		});
 	</script>
