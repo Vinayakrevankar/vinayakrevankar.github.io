@@ -51,6 +51,7 @@ experience in software development frameworks such as Node.js, Serverless, and E
 Apart from this, I have extensive experience with AWS cloud platform and services. In addition
 to my technical skills, taking ownership of the projects undertaken, communication skills, and
 leadership skills are also some of the areas where my strengths lie.`
+aboutMe = `Meticulous and action-oriented developer with <b>${Math.ceil((Math.floor(res / 12)}.${res % 12}) years <\/b> years of experience in software development. With a solid background in programming, software architecture, and project management, I have the ability to lead teams to create and maintain innovative, reliable, and scalable software applications. My technical expertise includes proficiency in various programming languages and development frameworks. In addition to my technical skills, I excel in taking ownership of projects, effective communication, and leadership.`
 
 const CV = {
     "aboutMe": aboutMe,
