@@ -130,7 +130,37 @@ const CV = {
         "Swagger",
         "Postman",
         "Lucid Chart"
-    ]
+    ], 
+    Skills: [
+  {
+    type: 'Languages',
+    list: ' JavaScript, TypeScript, Python, Java, C#, PHP, C'
+  },
+  {
+    type: 'Tools',
+    list: ' VS Code, Postman, JIRA, Lucid Chart, SonarQube, Dynatrace, Swagger, Azure DevOps, Git, GitHub, Docker, Xcode, and NPM'
+  },
+  {
+    type: 'AWS Services',
+    list: ' AWS Lambda, API Gateway, CloudWatch, DynamoDB, SQS, S3, SNS, and SSM.'
+  },
+  {
+    type: 'Frameworks',
+    list: ' ES6, jQuery, Bootstrap, ExpressJS, Mocha, Chai, Android SDK, GraphQL, Angular and ReactJS'
+  },
+  {
+    type: 'Databases',
+    list: ' MySQL, Microsoft SQL Server, PostgreSQL, NoSQL.'
+  },
+  {
+    type: 'Methodologies',
+    list: ' Test-Driven Development, Agile, Scrum, Continuous Integration, Continuous Deployment.'
+  },
+  {
+    type: 'Interpersonal',
+    list: ' Collaborative, Critical Thinking, Problem-solving, Decision making, Time management, Accountability, Attention to detail, Feedback Receptivity, Customer focus'
+  }
+]
 }
 
 
