@@ -60,8 +60,19 @@ const CV = {
             "details": [{
                 "role": "Consultant - Software Engineer Lead",
                 "duration": "20-AUG-2021 — 29-DEC-2023",
-                "description": `Part of Middleware development Team for design and development of API for food restaurant for five modules using NodeJS, Serverless Frameworks , AWS  ( Lambda, API Gateway, CloudWatch, Dynamodb, SQS, S3 ) and Azure DevOps.
-\n Developed a tool for internal use which will help the developer for easy navigation to AWS services.`
+                "description": `Part of the middleware development team for design and development of API for food restaurant for five modules using NodeJS, serverless frameworks, and AWS. Developed a tool for internal use that helped the developers navigate to AWS services easily.
+• Developed REST APIs, conducted unit testing to validate unit-level functionalities, and thoroughly documented code,
+ APIs, and technical specifications to ensure clarity and facilitate future maintenance and enhancements. <br>
+• Engaged with stakeholders and architects, collaborating closely with them throughout the project lifecycle. <br>
+• Identified and reported opportunities to improve the efficiency and quality of the product. <br>
+• Managed a team of 10 developers and 4 testers, and mentored 10 junior developers, fostering collaboration, ensuring accountability, and providing clear direction to achieve project goals efficiently. <br>
+• Participated in regular production deployment calls to ensure smooth and efficient deployment of software updates. <br>
+• Collaborated with cross-functional teams to ensure consensus on release and acceptance criteria for new features and to address any deployment issues, minimizing disruption to user experience. <br>
+• Followed coding standards, best practices, and design patterns for Node.js development to maintain code consistency, readability, and maintainability, while also adhering to secure coding principles to enhance application security. <br>
+• Successfully led and delivered two critical large-scale projects, achieving a defect rate of less than 5%. <br>
+• Developed an internal tool to streamline access to AWS resources, simplifying developers' navigation directly from the tool, which significantly benefited both developers and architects. <br>
+• Optimized service performance by refactoring code, implementing a caching mechanism, and adjusting Lambda configurations, reducing response time from 12 seconds to 5 seconds. <br>
+`
 
             }
             ]
@@ -72,12 +83,22 @@ const CV = {
                 {
                     "role": "Associate Software Engineer",
                     "duration": "01-JUN-2019 — 30-JULY-2021",
-                    "description": "Advanced Product and Quality Planning development team to design and develop an integrated software solution for the Aircraft Manufacturing Industry using NodeJS and other technologies."
+                    "description": `Part of the Advanced Product & Quality Planning development team to design & develop an integrated software solution for the Aircraft Manufacturing Industry using Node.JS and other technologies. I contributed to 3 of the 5 project modules. <br>
+• Developed, and maintained RESTful APIs with Node.js and Express.js, ensuring seamless communication between front-end and back-end systems.<br>
+• Implemented MySQL databases with optimized queries for efficient data storage and retrieval, prioritizing system performance and data integrity.<br>
+• Collaborated closely with front-end developers to integrate back-end functionality, ensuring a cohesive user experience across the application.<br>
+• Identified and resolved technical issues and performance bottlenecks through thorough troubleshooting and debugging, ensuring smooth operation under high-load conditions.<br>
+• Implemented robust security measures to safeguard application data and functionality, prioritizing user privacy and system integrity. <br>
+`
                 },
                 {
                     "role": "Intern",
                     "duration": "15-APR-2019 — 31-MAY-2019",
-                    "description": "Exposure to HTML, CSS, JavaScript, NodeJS. Knowledge of database (MySQL, SQL SERVER) Familiarity with software version control: Git, GitHub Agile Software Development methodology concepts Complete programming assignment using a JavaScript."
+                    "description": `• Worked on front-end technologies (HTML, CSS, JavaScript) to create dynamic user interfaces, combined with server-side Node.js expertise for building highly scalable web applications.<br>
+• Experienced in database management (MySQL, SQL Server) for efficient data handling in projects.<br>
+• Learned version control tools such as Git and GitHub, enabling seamless collaboration and efficient change tracking in coding projects.<br>
+• Familiar with Agile methodologies, contributing to iterative development, sprint planning, and a collaborative work environment.<br>
+`
                 }
             ]
         }
