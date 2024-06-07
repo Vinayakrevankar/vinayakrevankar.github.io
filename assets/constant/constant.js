@@ -104,34 +104,7 @@ const CV = {
             ]
         }
     ],
-    "technologies": [
-        "Javascript",
-        "NodeJS",
-        "Serverless",
-        "Mocha",
-        "TypeScript",
-        "Azure DevOps",
-        "ExpressJS",
-        "ES6",
-        "jQuery",
-        "Bootstrap",
-        "Python",
-        "HTML",
-        "MySQL",
-        "MSSQL",
-        "Java",
-        "Android Studio",
-        "CSS",
-        "PHP",
-        "C#",
-        "JIRA",
-        "GitHub",
-        "VS Code",
-        "Swagger",
-        "Postman",
-        "Lucid Chart"
-    ], 
-    Skills: [
+    "skills": [
   {
     type: 'Languages',
     list: ' JavaScript, TypeScript, Python, Java, C#, PHP, C'

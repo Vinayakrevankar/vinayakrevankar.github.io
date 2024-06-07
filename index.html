@@ -114,7 +114,7 @@
 								Revankar </h3>
 							<!-- <br> 🇮🇳|🇺🇸 </h3> -->
 							<div> Master's in Computer Science at Worcester Polytechnic Institute 2026 <br></div>
-							<hr>
+							<hr class="color">
 							<span class="badge1 badge-primary">
 								Actively looking for internship for Spring 2025 <br>
 								<!-- <button class="badge1 badge-primary" style="color: black;"
@@ -151,8 +151,8 @@
 									title="Phone">
 									<a href="tel:+16177929284"><i class="font-icon icon-phone"></i>+1 (617) 792-9284</a>
 								</li>
-								<a href="./assets/Vinayak_Revankar.vcf" style="margin-top:25px;"
-									id="saveContact"><span id="spanSaveContact">
+								<a href="./assets/Vinayak_Revankar.vcf" style="margin-top:25px;" id="saveContact"><span
+										id="spanSaveContact">
 										Save contact
 									</span></a>
 							</ul>
@@ -184,10 +184,10 @@
 
 									</div>
 								</div>
-								
+
 							</div>
 						</div>
-			<div class="pb-0">
+						<div class="pb-0">
 							<div class="row">
 
 								<div class="col-12 col-lg-6">
@@ -200,11 +200,12 @@
 											</h5>
 											<h5 class="title title--h5 timeline__title">Worcester Polytechnic Institute,
 												Worcester, MA, United States</h5>
-											<span class="timeline__period">2024 — 2026</span>
+											<span class="timeline__period">2024 — 2025</span>
 
 										</article>
 										<article class="timeline__item">
-											<h5 class="title title--h5 timeline__title">Bachelor of Engineering (CSE)
+											<h5 class="title title--h5 timeline__title">Bachelor of Engineering in
+												Computer of Science
 											</h5>
 											<h5 class="title title--h5 timeline__title">KLS Gogte Institute of
 												Technology, Belgaum, KA, India</h5>
@@ -232,40 +233,50 @@
 										</article>
 									</div>
 								</div>
-						</div>
-								
 							</div>
+
 						</div>
-						<div class="box-inner box-inner--rounded">
+					</div>
+					<br>
+					<div class="box shadow pb-0">
+						<div class="row">
 							<div class="row">
 								<div class="col-12 col-lg-12">
 									<div class="pb-0 pb-sm-2">
 										<h1 class="title title--h1 first-title title__separate">Skills</h1>
-										<p id="aboutMe"></p>
-									</div>
-									<div class="box box__second" id="listOfTechnology">
+										<div style="display: flex;">
+											<ul id="skills"></ul>
 
+										</div>
 									</div>
+
 
 								</div>
 
 							</div>
-
 						</div>
-						<br>
-						<div id="Projects">
-							<h2 class="title title--h3">Projects</h2>
+					</div>
+					<br>
+					<div class="box shadow pb-0">
+						<div class="row">
+							<div id="Projects">
+								<div class="pb-0 pb-sm-2">
+									<h1 class="title title--h1 first-title title__separate">Projects</h1>
 
-							<div class="box-inner box-inner--rounded" id="projectContent">
+								</div>
 
+								<div id="projectContent">
+
+								</div>
 							</div>
 						</div>
 					</div>
-
 				</div>
 
-
 			</div>
+
+
+		</div>
 
 
 		</div>
@@ -294,7 +305,7 @@
 	<script src="assets/js/util.js"></script>
 	<script src="assets/constant/constant.js"></script>
 
-<script>
+	<script>
 		function generateProjectContainer({ imageSrc, projectTitle, description, link }) {
 
 			return `<div class="container_project">
@@ -308,7 +319,7 @@
 				</div>
 			</div><hr>`
 		}
-		
+
 		projects.forEach(val => {
 			$('#projectContent').append(generateProjectContainer(val))
 		})
@@ -319,15 +330,15 @@
 
 		document.getElementById("modeLight").style.display = localStorage.getItem("mode") == 'light' ? "block" : "none";
 		document.getElementById("modeDark").style.display = localStorage.getItem("mode") == 'dark' ? "block" : "none";;
-		
+
 		$(document).ready(function () {
-	
+
 			let multiplePosition = ({ role, duration, description }) => `
 											<h5 class="title title--h5 timeline__title">${role}<\/h5>
 											<span class="timeline__period">${duration}<\/span>
 											<p class="timeline__description">${description}<\/p>`
 
-			$("#listOfTechnology").append(CV.technologies.map(val => `<span class='badge1 badge-primary'>${val}<\/span>`).join("\n"));
+			$("#skills").append(CV.skills.map(val => ` <li style="justify-content: space-between;"> ${val.type}: ${val.list} </li>`).join("\n"));
 			$("#aboutMe").append(CV.aboutMe);
 			let listOfCompanies = CV.company.map(val => {
 				let dat = `<article class="timeline__item"><h5 class="title title--h5 timeline__title"><u>${val.name}<\/u><\/h5><br>`
@@ -335,6 +346,17 @@
 				return dat;
 			}).join("\n");
 			$("#ListOfCompanies").append(listOfCompanies);
+
+			// Get all HR tags
+			var hrTags = document.querySelectorAll('hr');
+			hrTags.forEach(function (hr) {
+				// Change the color to red
+				if (localStorage.getItem("mode") == "light" || !localStorage.getItem("mode"))
+					hr.style.borderColor = 'black'; // Change color to any valid CSS color
+				else
+					hr.style.borderColor = 'white';
+			});
+
 		});
 	</script>
 
