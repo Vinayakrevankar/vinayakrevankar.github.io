@@ -115,7 +115,7 @@
 							<!-- <br> 🇮🇳|🇺🇸 </h3> -->
 							<div> Master's in Computer Science at Worcester Polytechnic Institute 2026 <br></div>
 							<hr class="color">
-							<span class="badge1 badge-primary">
+							<span class="badge1 badge-primary" hidden>
 								Actively looking for internship for Spring 2025 <br>
 								<!-- <button class="badge1 badge-primary" style="color: black;"
 									onclick="window.open(``)"><i
@@ -177,19 +177,13 @@
 						<div class="pb-0">
 							<div class="row">
 
-								<div class="col-12 col-lg-12">
+								<div class="col-6 col-lg-6">
 									<h2 class="title title--h3"><img class="title-icon"
 											src="assets/icons/icon-experience.svg" alt="" /> Experience</h2>
 									<div class="timeline" id="ListOfCompanies">
 
 									</div>
 								</div>
-
-							</div>
-						</div>
-						<div class="pb-0">
-							<div class="row">
-
 								<div class="col-12 col-lg-6">
 									<h2 class="title title--h3"><img class="title-icon"
 											src="assets/icons/icon-education.svg" alt="" /> Education</h2>
@@ -234,8 +228,8 @@
 									</div>
 								</div>
 							</div>
-
 						</div>
+						
 					</div>
 					<br>
 					<div class="box shadow pb-0">
@@ -336,7 +330,7 @@
 			let multiplePosition = ({ role, duration, description }) => `
 											<h5 class="title title--h5 timeline__title">${role}<\/h5>
 											<span class="timeline__period">${duration}<\/span>
-											<p class="timeline__description">${description}<\/p>`
+											<p class="timeline__description">${description || ''}<\/p>`
 
 			$("#skills").append(CV.skills.map(val => ` <li style="justify-content: space-between;"> ${val.type}: ${val.list} </li>`).join("\n"));
 			$("#aboutMe").append(CV.aboutMe);
