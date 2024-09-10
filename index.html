@@ -332,7 +332,7 @@
 											<span class="timeline__period">${duration}<\/span>
 											<p class="timeline__description">${description || ''}<\/p>`
 
-			$("#skills").append(CV.skills.map(val => ` <li style="justify-content: space-between;"> ${val.type}: ${val.list} </li>`).join("\n"));
+			// $("#skills").append(CV.skills.map(val => ` <li style="justify-content: space-between;"> ${val.type}: ${val.list} </li>`).join("\n"));
 			$("#aboutMe").append(CV.aboutMe);
 			let listOfCompanies = CV.company.map(val => {
 				let dat = `<article class="timeline__item"><h5 class="title title--h5 timeline__title"><u>${val.name}<\/u><\/h5><br>`
