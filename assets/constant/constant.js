@@ -42,7 +42,7 @@ let d1 = new Date('2019-04-01')  // start datte
 let d2 = new Date('2023-12-29')
 let res = monthDiff(d1, d2);
 
-aboutMe = `Meticulous and action-oriented developer with <b>${Math.ceil(`${`${Math.floor(res / 12)}.${res % 12}`}`)}<\/b> years of experience in software development. With a solid background in programming, software architecture, and project management, I have the ability to lead teams to create and maintain innovative, reliable, and scalable software applications. My technical expertise includes proficiency in various programming languages and development frameworks. In addition to my technical skills, I excel in taking ownership of projects, effective communication, and leadership.`
+aboutMe = `Meticulous and action-oriented developer with nearly <b>${Math.ceil(`${`${Math.floor(res / 12)}.${res % 12}`}`)}<\/b> years of experience in software development. With a solid background in programming, software architecture, and project management, I have the ability to lead teams to create and maintain innovative, reliable, and scalable software applications. My technical expertise includes proficiency in various programming languages and development frameworks. In addition to my technical skills, I excel in taking ownership of projects, effective communication, and leadership.`
 
 const CV = {
     "aboutMe": aboutMe,
