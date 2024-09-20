@@ -56,7 +56,7 @@
 	<link rel="apple-touch-icon" sizes="114x114" href="assets/images/favicons/apple-touch-icon-114x114.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="assets/images/favicons/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicons/apple-touch-icon-57x57.png">
-
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 	<meta http-equiv="Pragma" content="no-cache">
 	<meta http-equiv="Expires" content="0">
@@ -111,7 +111,8 @@
 						</svg>
 						<div class="text-center">
 							<h3 class="title title--h2 sidebar__user-name"><span class="weight--500">Vinayak</span>
-								Revankar </h3>
+								Revankar <i class="fas fa-volume-up fa-xxs speak-icon small-icon" onclick="pronounceName()"></i> </h3>
+								
 							<!-- <br> 🇮🇳|🇺🇸 </h3> -->
 							<div> Master's in Computer Science at Worcester Polytechnic Institute 2025 <br></div>
 							<hr class="color">
@@ -300,6 +301,16 @@
 	<script src="assets/constant/constant.js"></script>
 
 	<script>
+		function pronounceName() {
+			const name = "Vin-AY-Ak Rev-An-Kar";
+			const utterance = new SpeechSynthesisUtterance(name);
+			utterance.lang = 'en-US';  // Set language, adjust if needed
+			utterance.rate = 0.75;        // Set the rate of speech
+			utterance.pitch = 1;       // Set the pitch of speech
+			utterance.volume = 0.5; 
+			window.speechSynthesis.speak(utterance);
+		}
+
 		function generateProjectContainer({ imageSrc, projectTitle, description, link }) {
 
 			return `<div class="container_project">
