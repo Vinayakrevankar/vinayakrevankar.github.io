@@ -58,7 +58,7 @@ const CV = {
     "aboutMe": aboutMe,
     "company": [
       {
-        "name": "Worcester Polytechnic Institute, Worcester, MA, United States",
+        "name": "Worcester Polytechnic Institute <br> Worcester, MA, United States",
         "details": [{
             "role": "Web Developer",
             "duration": "SEP-2024 — Present",
@@ -68,7 +68,7 @@ const CV = {
         ]
     },
         {
-            "name": "Capgemini Technology Services India Limited, Bangalore, KA, India",
+            "name": "Capgemini Technology Services India Limited <br> Bangalore, KA, India",
             "details": [{
                 "role": "Consultant - Software Engineer Lead",
                 "duration": "AUG-2021 — DEC-2023",
@@ -92,7 +92,7 @@ const CV = {
             ]
         },
         {
-            "name": "Neviton Softech Private Limited,  Bangalore, KA, India",
+            "name": "Neviton Softech Private Limited <br>  Bangalore, KA, India",
             "details": [
                 {
                     "role": "Associate Software Engineer",
