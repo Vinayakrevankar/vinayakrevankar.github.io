@@ -1,4 +1,14 @@
-let projects = [{
+let projects = [
+  {
+    imageSrc: "./assets/images/syllablast_puzzle.png",
+    projectTitle: "Syllablast Puzzle",
+    description: `•  Developed an interactive syllable puzzle game using Next.js, React, and GitHub Actions, featuring dynamic configurations that allow users to select different game setups, enhancing replayability and engagement.
+    <br> •  Implemented real-time score tracking and user-friendly interfaces, enabling players to swap syllables and complete words while providing instant feedback and rewarding animations upon puzzle completion.`,
+    link: {
+        "GitHub": "https://github.com/Vinayakrevankar/syllablast-game"
+    }
+  },
+  {
     imageSrc: "./assets/images/gitlibrary_logo.webp",
     projectTitle: "GIT Library",
     description: "Users can seamlessly manage their borrowed books through our system, which includes features such as checking issued books, monitoring late fees, and renewing books as needed. With our integrated Paytm payment gateway, users can conveniently settle any fines incurred, ensuring a hassle-free experience.",
@@ -35,10 +45,10 @@ let projects = [{
     link: {
         "GitHub": "https://github.com/Vinayakrevankar/Awaitero"
     }
-}
+},
 
 ]
-let d1 = new Date('2019-04-01')  // start datte
+let d1 = new Date('2019-04-15')  // start datte
 let d2 = new Date('2023-12-29')
 let res = monthDiff(d1, d2);
 
@@ -47,11 +57,23 @@ aboutMe = `Meticulous and action-oriented developer with nearly <b>${Math.ceil(`
 const CV = {
     "aboutMe": aboutMe,
     "company": [
+      {
+        "name": "Worcester Polytechnic Institute, Worcester, MA, United States",
+        "details": [{
+            "role": "Web Developer",
+            "duration": "SEP-2024 — Present",
+            "startDate": "30/09/2024",
+            "endDate": "Present",
+        }
+        ]
+    },
         {
-            "name": "Capgemini Technology Services India Limited",
+            "name": "Capgemini Technology Services India Limited, Bangalore, KA, India",
             "details": [{
                 "role": "Consultant - Software Engineer Lead",
-                "duration": "20-AUG-2021 — 29-DEC-2023",
+                "duration": "AUG-2021 — DEC-2023",
+                "startDate": "20/08/2021",
+                "endDate": "29/08/2023",
 //                 "description": `Part of the middleware development team for design and development of API for food restaurant for five modules using NodeJS, serverless frameworks, and AWS. Developed a tool for internal use that helped the developers navigate to AWS services easily.
 // • Developed REST APIs, conducted unit testing to validate unit-level functionalities, and thoroughly documented code,
 //  APIs, and technical specifications to ensure clarity and facilitate future maintenance and enhancements. <br>
@@ -70,11 +92,13 @@ const CV = {
             ]
         },
         {
-            "name": "Neviton Softech Private Limited",
+            "name": "Neviton Softech Private Limited,  Bangalore, KA, India",
             "details": [
                 {
                     "role": "Associate Software Engineer",
-                    "duration": "01-JUN-2019 — 30-JULY-2021",
+                    "duration": "April-2019 — JULY-2021",
+                    "startDate": "15/04/2019",
+                    "endDate": "30/07/2021",
 //                     "description": `Part of the Advanced Product & Quality Planning development team to design & develop an integrated software solution for the Aircraft Manufacturing Industry using Node.JS and other technologies. I contributed to 3 of the 5 project modules. <br>
 // • Developed, and maintained RESTful APIs with Node.js and Express.js, ensuring seamless communication between front-end and back-end systems.<br>
 // • Implemented MySQL databases with optimized queries for efficient data storage and retrieval, prioritizing system performance and data integrity.<br>
@@ -82,16 +106,16 @@ const CV = {
 // • Identified and resolved technical issues and performance bottlenecks through thorough troubleshooting and debugging, ensuring smooth operation under high-load conditions.<br>
 // • Implemented robust security measures to safeguard application data and functionality, prioritizing user privacy and system integrity. <br>
 // `
-                },
-                {
-                    "role": "Intern",
-                    "duration": "15-APR-2019 — 31-MAY-2019",
-//                     "description": `• Worked on front-end technologies (HTML, CSS, JavaScript) to create dynamic user interfaces, combined with server-side Node.js expertise for building highly scalable web applications.<br>
-// • Experienced in database management (MySQL, SQL Server) for efficient data handling in projects.<br>
-// • Learned version control tools such as Git and GitHub, enabling seamless collaboration and efficient change tracking in coding projects.<br>
-// • Familiar with Agile methodologies, contributing to iterative development, sprint planning, and a collaborative work environment.<br>
-// `
                 }
+//                 {
+//                     "role": "Intern",
+//                     "duration": "15-APR-2019 — 31-MAY-2019",
+// //                     "description": `• Worked on front-end technologies (HTML, CSS, JavaScript) to create dynamic user interfaces, combined with server-side Node.js expertise for building highly scalable web applications.<br>
+// // • Experienced in database management (MySQL, SQL Server) for efficient data handling in projects.<br>
+// // • Learned version control tools such as Git and GitHub, enabling seamless collaboration and efficient change tracking in coding projects.<br>
+// // • Familiar with Agile methodologies, contributing to iterative development, sprint planning, and a collaborative work environment.<br>
+// // `
+//                 }
             ]
         }
     ],
