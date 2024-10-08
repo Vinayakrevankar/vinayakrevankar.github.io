@@ -96,7 +96,7 @@ const CV = {
             "details": [
                 {
                     "role": "Associate Software Engineer",
-                    "duration": "April-2019 — JULY-2021",
+                    "duration": "APR-2019 — JUL-2021",
                     "startDate": "15/04/2019",
                     "endDate": "30/07/2021",
 //                     "description": `Part of the Advanced Product & Quality Planning development team to design & develop an integrated software solution for the Aircraft Manufacturing Industry using Node.JS and other technologies. I contributed to 3 of the 5 project modules. <br>
