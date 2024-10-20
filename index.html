@@ -143,7 +143,7 @@
 						<div class="sidebar__info box-inner box-inner--rounded">
 							<ul class="contacts-block">
 
-<!-- 								<li class="contacts-block__item" data-toggle="tooltip" data-placement="top"
+ 								<!-- <li class="contacts-block__item" data-toggle="tooltip" data-placement="top"
 									title="E-mail">
 									<a href="mailto:vinayakanrevankar@gmail.com" style="font-size:small"><i
 											class="font-icon icon-envelope"></i> vinayakanrevankar@gmail.com</a>
@@ -328,10 +328,10 @@
 		projects.forEach(val => {
 			$('#projectContent').append(generateProjectContainer(val))
 		})
-		displaySaveContact();
+		// displaySaveContact();
 		window.addEventListener("resize", displaySaveContact)
 		let color = localStorage.getItem("mode") == "light" ? "black" : "white";
-		document.getElementById("spanSaveContact").style.color = color;
+		// document.getElementById("spanSaveContact").style.color = color;
 
 		document.getElementById("modeLight").style.display = localStorage.getItem("mode") == 'light' ? "block" : "none";
 		document.getElementById("modeDark").style.display = localStorage.getItem("mode") == 'dark' ? "block" : "none";;

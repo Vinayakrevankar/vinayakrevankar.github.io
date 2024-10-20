@@ -1,11 +1,11 @@
 function displaySaveContact() {
-    let isBigWindow = $(this).width() > 550;
-    if (isBigWindow) {
-        document.getElementById("saveContact").style.display = "none";
+    // let isBigWindow = $(this).width() > 550;
+    // if (isBigWindow) {
+    //     document.getElementById("saveContact").style.display = "none";
 
-    } else {
-        document.getElementById("saveContact").style.display = "block";
-    }
+    // } else {
+    //     document.getElementById("saveContact").style.display = "block";
+    // }
 }
 
 function monthDiff(d1, d2) {
