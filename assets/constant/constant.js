@@ -58,12 +58,22 @@ const CV = {
     "aboutMe": aboutMe,
     "company": [
       {
+        "name": "Skillz Inc <br> Las Vegas, NV, United States",
+        "details": [{
+            "role": "Software Engineer Co-op",
+            "duration": "JAN-2024 — Present",
+            "startDate": "13/01/2024",
+            "endDate": "Present",
+        }
+        ]
+    },
+      {
         "name": "Worcester Polytechnic Institute <br> Worcester, MA, United States",
         "details": [{
             "role": "Web Developer",
-            "duration": "SEP-2024 — Present",
+            "duration": "SEP-2024 — JAN-2024",
             "startDate": "30/09/2024",
-            "endDate": "Present",
+            "endDate": "10/01/2024",
         }
         ]
     },
