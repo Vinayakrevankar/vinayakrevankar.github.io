@@ -52,17 +52,34 @@ let d1 = new Date('2019-04-15')  // start datte
 let d2 = new Date('2023-12-29')
 let res = monthDiff(d1, d2);
 
-aboutMe = `Meticulous and action-oriented developer with nearly <b>${Math.ceil(`${`${Math.floor(res / 12)}.${res % 12}`}`)}<\/b> years of experience in software development. With a solid background in programming, software architecture, and project management, I have the ability to lead teams to create and maintain innovative, reliable, and scalable software applications. My technical expertise includes proficiency in various programming languages and development frameworks. In addition to my technical skills, I excel in taking ownership of projects, effective communication, and leadership.`
+function calculateExperience(companiesData) {
+  let totalMonths = 0;
 
+  companiesData.forEach(company => {
+    company.details.forEach(detail => {
+      let start = new Date(detail.startDate.split('/').reverse().join('-'));
+      let end = detail.endDate === "Present" ? new Date() : new Date(detail.endDate);
+
+      let months = (end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth());
+      totalMonths += months;
+    });
+  });
+
+  // Round the total months to the nearest half year
+  let years = totalMonths / 12;
+  let roundedYears = Math.round(years * 2) / 2;  // Round to the nearest 0.5 years
+
+  return roundedYears.toFixed(1); // Convert to string with 1 decimal place
+}
 const CV = {
     "aboutMe": aboutMe,
-    "company": [
+    "companies": [
       {
         "name": "Skillz Inc <br> Las Vegas, NV, United States",
         "details": [{
             "role": "Software Engineer Co-op",
-            "duration": "JAN-2024 — Present",
-            "startDate": "13/01/2024",
+            "duration": "JAN-2025 — Present",
+            "startDate": "2025-01-13",
             "endDate": "Present",
         }
         ]
@@ -71,9 +88,9 @@ const CV = {
         "name": "Worcester Polytechnic Institute <br> Worcester, MA, United States",
         "details": [{
             "role": "Web Developer",
-            "duration": "SEP-2024 — JAN-2024",
-            "startDate": "30/09/2024",
-            "endDate": "10/01/2024",
+            "duration": "SEP-2024 — JAN-2025",
+            "startDate": "2024-09-30",
+            "endDate": "2025-01-10",
         }
         ]
     },
@@ -82,8 +99,8 @@ const CV = {
             "details": [{
                 "role": "Consultant - Software Engineer Lead",
                 "duration": "AUG-2021 — DEC-2023",
-                "startDate": "20/08/2021",
-                "endDate": "29/08/2023",
+                "startDate": "2021-08-20",
+                "endDate": "2023-12-29",
 //                 "description": `Part of the middleware development team for design and development of API for food restaurant for five modules using NodeJS, serverless frameworks, and AWS. Developed a tool for internal use that helped the developers navigate to AWS services easily.
 // • Developed REST APIs, conducted unit testing to validate unit-level functionalities, and thoroughly documented code,
 //  APIs, and technical specifications to ensure clarity and facilitate future maintenance and enhancements. <br>
@@ -107,8 +124,8 @@ const CV = {
                 {
                     "role": "Associate Software Engineer",
                     "duration": "APR-2019 — JUL-2021",
-                    "startDate": "15/04/2019",
-                    "endDate": "30/07/2021",
+                    "startDate": "2019-04-15",
+                    "endDate": "2021-07-30",
 //                     "description": `Part of the Advanced Product & Quality Planning development team to design & develop an integrated software solution for the Aircraft Manufacturing Industry using Node.JS and other technologies. I contributed to 3 of the 5 project modules. <br>
 // • Developed, and maintained RESTful APIs with Node.js and Express.js, ensuring seamless communication between front-end and back-end systems.<br>
 // • Implemented MySQL databases with optimized queries for efficient data storage and retrieval, prioritizing system performance and data integrity.<br>
@@ -162,3 +179,5 @@ const CV = {
 }
 
 
+aboutMe = `Meticulous and action-oriented developer with <b>${calculateExperience(CV.companies)}<\/b> years of experience in software development. With a solid background in programming, software architecture, and project management, I have the ability to lead teams to create and maintain innovative, reliable, and scalable software applications. My technical expertise includes proficiency in various programming languages and development frameworks. In addition to my technical skills, I excel in taking ownership of projects, effective communication, and leadership.`
+CV.aboutMe = aboutMe
