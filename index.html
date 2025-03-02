@@ -62,8 +62,8 @@
 
 	<link rel="shortcut icon" type="image/png" href="assets/images/favicon/favicon.png" />
 </head>
-
-<body class="bg-triangles">
+<!-- bg-triangle  -->
+<body class="skillzGradient">
 	<!-- Preloader -->
 	<div class="preloader">
 		<div class="preloader__wrap">
@@ -78,7 +78,7 @@
 	<main class="main">
 		<div class="container gutter-top">
 
-			<div class="row sticky-parent">
+			<div class="row sticky-parent" style="margin-bottom: 20px;">
 
 				<!-- Sidebar -->
 				<aside class="col-12 col-md-12 col-xl-3">
@@ -109,9 +109,15 @@
 							</g>
 						</svg>
 						<div class="text-center">
-							<h3 class="title title--h2 sidebar__user-name"><span class="weight--500">Vinayak</span>
-								Revankar <i class="fas fa-volume-up fa-xxs speak-icon small-icon" onclick="pronounceName()"></i> </h3>
+							<h3 class="title title--h2 sidebar__user-name">
+								<ruby class="name-ruby">
+									<span class="name-text">Vinayak Revankar <i class="fas fa-volume-up fa-xxs speak-icon small-icon" onclick="pronounceName()"></i></span> 
+									<rt>vih-NAY-ahk &nbsp; reh-VAN-kar</rt> 
+								</ruby>
 								
+							</h3>
+							
+							
 							<!-- <br> 🇮🇳|🇺🇸 </h3> -->
 							<div> Master's in Computer Science at Worcester Polytechnic Institute 2025 <br></div>
 							<hr class="color">
@@ -254,7 +260,7 @@
 					<div class="box shadow pb-0">
 						<div class="row">
 							<div id="Projects">
-								<div class="pb-0 pb-sm-2">
+								<div class="pb-0 pb-sm-2 pl-3">
 									<h1 class="title title--h1 first-title title__separate">Projects</h1>
 
 								</div>
@@ -272,8 +278,6 @@
 
 		</div>
 
-
-		</div>
 
 	</main>
 
@@ -300,8 +304,11 @@
 	<script src="assets/constant/constant.js"></script>
 
 	<script>
+		function openWebsite(url) {
+        window.open(url, "_blank");  // Replace with the website you want
+    	}
 		function pronounceName() {
-			const name = "Vin-AY-Ak Rev-An-Kar";
+			const name = "Vinayak Revankar";
 			const utterance = new SpeechSynthesisUtterance(name);
 			utterance.lang = 'en-US';  // Set language, adjust if needed
 			utterance.rate = 0.75;        // Set the rate of speech
@@ -344,9 +351,9 @@
 
 			// $("#skills").append(CV.skills.map(val => ` <li style="justify-content: space-between;"> ${val.type}: ${val.list} </li>`).join("\n"));
 			$("#aboutMe").append(CV.aboutMe);
-			let listOfCompanies = CV.companies.map(val => {
-				let dat = `<article class="timeline__item"><h5 class="title title--h5 timeline__title"><u>${val.name}<\/u><\/h5><br>`
-				dat += val.details.map(val1 => multiplePosition(val1)).join("\n") + "<\/article>";
+			let listOfCompanies = CV.companies.map(company => {
+				let dat = `<span onclick="openWebsite('${company.website}')"><article class="timeline__item"><h5 class="title title--h5 timeline__title ${flags.applyTheme && localStorage.getItem("mode") !== "dark"  ? company.themeClass?.text: ""}"><u>${company.name} <br> ${company.address} <\/u><\/h5><br>`
+				dat += company.details.map(position => multiplePosition(position)).join("\n") + "<\/article></span>";
 				return dat;
 			}).join("\n");
 			$("#ListOfCompanies").append(listOfCompanies);

@@ -2648,8 +2648,8 @@ button:focus {
     - Other
 ----------------------------------------------------------------- */
 .back-to-top {
-  border-top: 0.0625rem solid #44566C;
-  border-left: 0.0625rem solid #44566C;
+  border-top: 0.125rem solid #44566C;
+  border-left: 0.125rem solid #44566C;
   cursor: pointer;
   height: 2rem;
   opacity: .5;

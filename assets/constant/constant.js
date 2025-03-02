@@ -51,7 +51,9 @@ let projects = [
 let d1 = new Date('2019-04-15')  // start datte
 let d2 = new Date('2023-12-29')
 let res = monthDiff(d1, d2);
-
+let flags = {
+  applyTheme: true,
+}
 function calculateExperience(companiesData) {
   let totalMonths = 0;
 
@@ -75,27 +77,34 @@ const CV = {
     "aboutMe": aboutMe,
     "companies": [
       {
-        "name": "Skillz Inc <br> Las Vegas, NV, United States",
+        "name": "Skillz Inc",
+        "address": "Las Vegas, NV, United States",
         "details": [{
             "role": "Software Engineer Co-op",
             "duration": "JAN-2025 — Present",
             "startDate": "2025-01-13",
             "endDate": "Present",
-        }
-        ]
+        }],
+        "themeClass": { "text": "skillzGradient-text" },
+        "website": "https://www.skillz.com/"
     },
       {
-        "name": "Worcester Polytechnic Institute <br> Worcester, MA, United States",
+        "name": "Worcester Polytechnic Institute",
+        "address": "Worcester, MA, United States",
         "details": [{
             "role": "Web Developer",
             "duration": "SEP-2024 — JAN-2025",
             "startDate": "2024-09-30",
             "endDate": "2025-01-10",
         }
-        ]
+        ],
+        "themeClass": { "text": "wpi-text" },
+        "website": "https://www.wpi.edu/"
+
     },
         {
-            "name": "Capgemini Technology Services India Limited <br> Bangalore, KA, India",
+            "name": "Capgemini Technology Services India Limited", 
+            "address": "Bangalore, KA, India",
             "details": [{
                 "role": "Consultant - Software Engineer Lead",
                 "duration": "AUG-2021 — DEC-2023",
@@ -116,10 +125,13 @@ const CV = {
 // `
 
             }
-            ]
+            ],
+            "themeClass": { "text": "capgemini-text" },
+            "website": "https://www.capgemini.com/in-en/"
         },
         {
-            "name": "Neviton Softech Private Limited <br>  Bangalore, KA, India",
+            "name": "Neviton Softech Private Limited",
+            "address": "Bangalore, KA, India",
             "details": [
                 {
                     "role": "Associate Software Engineer",
@@ -143,7 +155,9 @@ const CV = {
 // // • Familiar with Agile methodologies, contributing to iterative development, sprint planning, and a collaborative work environment.<br>
 // // `
 //                 }
-            ]
+            ],
+            "themeClass": { "text": "neviton-text" },
+            "website": "https://www.neviton.com/"
         }
     ],
     "skills": [

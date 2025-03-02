@@ -92,3 +92,63 @@
         margin: 0 0 20px 0;
     }
 } 
+
+.skillzGradient-text {
+        background: linear-gradient(90deg, #1836ff 0%, #1836ff 33%, #f60038 66%, #f60038 100%);
+        -webkit-background-clip: text; /* Clips the background to the text */
+        background-clip: text; /* Clips the background to the text */
+        color: transparent; /* Makes the text transparent so the gradient shows through */
+        background-size: 190%; /* Make the gradient wider */
+        background-position: 100%; /* Shift the gradient position */
+}
+
+.skillzGradient {
+    background: linear-gradient(90deg, #1836ff, #f60038);
+}
+
+.wpi-text {
+    color: #AC2B37; /* Set the text color to the specific color */
+    background: none; /* Remove background gradient */
+    -webkit-background-clip: unset; /* Remove background clip */
+    background-clip: unset; /* Remove background clip */
+}
+
+.capgemini-text {
+    color: #0070AD; /* Set the text color to the specific color */
+    background: none; /* Remove background gradient */
+    -webkit-background-clip: unset; /* Remove background clip */
+    background-clip: unset; /* Remove background clip */
+}
+
+.neviton-text {
+    color: #1D90DD; /* Set the text color to the specific color */
+    background: none; /* Remove background gradient */
+    -webkit-background-clip: unset; /* Remove background clip */
+    background-clip: unset; /* Remove background clip */
+}
+
+
+
+
+.name-ruby {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align text */
+}
+
+.name-text {
+    font-size: 28px; /* Make the main name bigger */
+    font-weight: bold;
+}
+
+.name-ruby rt {
+    font-size: 14px;  /* Smaller phonetic text */
+    color: gray;
+    font-weight: normal;
+    line-height: 1.2; /* Adjust line height for better spacing */
+}
+
+.speak-icon {
+    font-size: 12px; /* Adjust icon size */
+    cursor: pointer;
+}
