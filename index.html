@@ -198,8 +198,8 @@
 										<article class="timeline__item">
 											<h5 class="title title--h5 timeline__title">Master's in Computer Science
 											</h5>
-											<h5 class="title title--h5 timeline__title">Worcester Polytechnic Institute,
-												Worcester, MA, United States</h5>
+											<h5 class="title title--h5 timeline__title"><span onclick="openWebsite('wpi.edu')">Worcester Polytechnic Institute </span></h5>
+												<h6 class="title title--h6 timeline__title">	Worcester, MA, United States</h6>
 											<span class="timeline__period">2024 — 2025</span>
 
 										</article>
@@ -207,8 +207,9 @@
 											<h5 class="title title--h5 timeline__title">Bachelor of Engineering in
 												Computer of Science
 											</h5>
-											<h5 class="title title--h5 timeline__title">KLS Gogte Institute of
-												Technology, Belgaum, KA, India</h5>
+											<h5 class="title title--h5 timeline__title"><span onclick="openWebsite('git.edu')">KLS Gogte Institute of
+												Technology </span></h5>
+											<h6 class="title title--h6 timeline__title">Belgaum, KA, India</h6>
 											<span class="timeline__period">2015 — 2019</span>
 										</article>
 
@@ -216,8 +217,9 @@
 										<article class="timeline__item">
 											<h5 class="title title--h5 timeline__title">Higher Secondary Certificate
 											</h5>
-											<h5 class="title title--h5 timeline__title">Govindram Seksaria Science PU
-												College, Belgaum, KA, India</h5>
+											<h5 class="title title--h5 timeline__title"><span onclick="openWebsite('gssbgm.edu.in')"> Govindram Seksaria Science PU
+												College </span></h5>
+											<h6 class="title title--h6 timeline__title">Belgaum, KA, India</h6>
 
 											<span class="timeline__period">2013 — 2015</span>
 										</article>
@@ -226,8 +228,8 @@
 										<article class="timeline__item">
 											<h5 class="title title--h5 timeline__title">Secondary School Certificate
 											</h5>
-											<h5 class="title title--h5 timeline__title">St. Xavier’s High school,
-												Belgaum, KA, India</h5>
+											<h5 class="title title--h5 timeline__title">St. Xavier’s High school </h5>
+											<h6 class="title title--h6 timeline__title">Belgaum, KA, India</h6>
 
 											<span class="timeline__period">2003 — 2013</span>
 										</article>
@@ -345,15 +347,17 @@
 		$(document).ready(function () {
 
 			let multiplePosition = ({ role, duration, description }) => `
-											<h5 class="title title--h5 timeline__title">${role}<\/h5>
-											<span class="timeline__period">${duration}<\/span>
-											<p class="timeline__description">${description || ''}<\/p>`
+											<h5 class="title title--h5 timeline__title">${role}<br>
+												<span class="timeline__period">${duration}<\/span>
+											<p class="timeline__description">${description || ''}<\/p>
+											<\/h5>
+										`
 
 			// $("#skills").append(CV.skills.map(val => ` <li style="justify-content: space-between;"> ${val.type}: ${val.list} </li>`).join("\n"));
 			$("#aboutMe").append(CV.aboutMe);
 			let listOfCompanies = CV.companies.map(company => {
-				let dat = `<span onclick="openWebsite('${company.website}')"><article class="timeline__item"><h5 class="title title--h5 timeline__title ${flags.applyTheme && localStorage.getItem("mode") !== "dark"  ? company.themeClass?.text: ""}"><u>${company.name} <br> ${company.address} <\/u><\/h5><br>`
-				dat += company.details.map(position => multiplePosition(position)).join("\n") + "<\/article></span>";
+				let dat = `<article class="timeline__item"><span onclick="openWebsite('${company.website}')"><h5 class="title title--h5 timeline__title ${flags.applyTheme && localStorage.getItem("mode") !== "dark"  ? company.themeClass?.text: ""}">${company.name} <br> ${company.address}</h5><br>`
+				dat += company.details.map(position => multiplePosition(position)).join("\n") + "</span></article>";
 				return dat;
 			}).join("\n");
 			$("#ListOfCompanies").append(listOfCompanies);

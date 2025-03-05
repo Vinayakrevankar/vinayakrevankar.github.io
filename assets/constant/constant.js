@@ -60,7 +60,7 @@ function calculateExperience(companiesData) {
   companiesData.forEach(company => {
     company.details.forEach(detail => {
       let start = new Date(detail.startDate.split('/').reverse().join('-'));
-      let end = detail.endDate === "Present" ? new Date() : new Date(detail.endDate);
+      let end = detail.endDate === "PRESENT" ? new Date() : new Date(detail.endDate);
 
       let months = (end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth());
       totalMonths += months;
@@ -77,13 +77,13 @@ const CV = {
     "aboutMe": aboutMe,
     "companies": [
       {
-        "name": "Skillz Inc",
+        "name": "Skillz Platform Inc.",
         "address": "Las Vegas, NV, United States",
         "details": [{
             "role": "Software Engineer Co-op",
-            "duration": "JAN-2025 — Present",
+            "duration": "JAN-2025 — PRESENT",
             "startDate": "2025-01-13",
-            "endDate": "Present",
+            "endDate": "PRESENT",
         }],
         "themeClass": { "text": "skillzGradient-text" },
         "website": "https://www.skillz.com/"
