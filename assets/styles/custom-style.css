@@ -94,7 +94,9 @@
 } 
 
 .skillzGradient {
-    background: linear-gradient(90deg, #1836ff, #f60038);
+    /* background: linear-gradient(135deg, #1836ff, #f60038); */
+    background: linear-gradient(150deg, #1836ff 0%, #8c1aff 50%, #f60038 100%);
+    
 }
 
 .skillzGradient-text {
