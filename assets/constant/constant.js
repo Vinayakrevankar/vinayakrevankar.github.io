@@ -80,7 +80,7 @@ const CV = {
         "name": "Skillz Platform Inc.",
         "address": "Las Vegas, NV, United States",
         "details": [{
-            "role": "Software Engineer Co-op",
+            "role": "Software Engineer",
             "duration": "JAN-2025 — PRESENT",
             "startDate": "2025-01-13",
             "endDate": "PRESENT",
