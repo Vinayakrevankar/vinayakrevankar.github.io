@@ -12,9 +12,9 @@ let projects = [
     imageSrc: "./assets/images/gitlibrary_logo.webp",
     projectTitle: "GIT Library",
     description: "Users can seamlessly manage their borrowed books through our system, which includes features such as checking issued books, monitoring late fees, and renewing books as needed. With our integrated Paytm payment gateway, users can conveniently settle any fines incurred, ensuring a hassle-free experience.",
-    link: {
-        "Play_Store": "https://play.google.com/store/apps/details?id=com.gitbelgaum.gitlibrary.gitlibrary&amp;hl=en_US"
-    }
+    // link: {
+    //     "Play_Store": "https://play.google.com/store/apps/details?id=com.gitbelgaum.gitlibrary.gitlibrary&amp;hl=en_US"
+    // }
 }, {
     imageSrc: "./assets/images/kohaopac_logo.webp",
     projectTitle: "Koha-Opac",
@@ -22,9 +22,9 @@ let projects = [
                                 and generate unique library codes, which users utilize alongside their username
                                 and password for authentication. Users can then access features such as checking
                                 issued books and viewing late fee amounts.`,
-    link: {
-        "Play_Store": "https://play.google.com/store/apps/details?id=com.lisacademy.org.kohaopac&hl=en_US"
-    }
+    // link: {
+    //     "Play_Store": "https://play.google.com/store/apps/details?id=com.lisacademy.org.kohaopac&hl=en_US"
+    // }
 },
 {
     imageSrc: "./assets/images/giftWise_logo.png",
