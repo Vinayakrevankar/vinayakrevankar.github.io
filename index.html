@@ -357,7 +357,7 @@
          		</div>
          		<div class="text_project">
          			<h4 class="title">${projectTitle}</h4>
-         			<p>${description} <br> ${Object.keys(link).map(p => `<a href="${link[p]}">${p.replace("_", " ")}</a>`).join("\n")}</p>
+         			<p>${description} <br> ${ link ? Object.keys(link).map(p => `<a href="${link[p]}">${p.replace("_", " ")}</a>`).join("\n") : ""}</p>
          			
          		</div>
          	</div><hr>`
@@ -407,3 +407,4 @@
    </body>
 
 </html>
+
