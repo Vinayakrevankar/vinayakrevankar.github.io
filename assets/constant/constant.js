@@ -192,6 +192,6 @@ const CV = {
 ]
 }
 
-
-aboutMe = `Meticulous and action-oriented developer with <b>${calculateExperience(CV.companies)}<\/b> years of experience in software development. With a solid background in programming, software architecture, and project management, I have the ability to lead teams to create and maintain innovative, reliable, and scalable software applications. My technical expertise includes proficiency in various programming languages and development frameworks. In addition to my technical skills, I excel in taking ownership of projects, effective communication, and leadership.`
+// ${calculateExperience(CV.companies)}
+aboutMe = `Meticulous and action-oriented developer with nearly <b>6<\/b> years of experience in software development. With a solid background in programming, software architecture, and project management, I have the ability to lead teams to create and maintain innovative, reliable, and scalable software applications. My technical expertise includes proficiency in various programming languages and development frameworks. In addition to my technical skills, I excel in taking ownership of projects, effective communication, and leadership.`
 CV.aboutMe = aboutMe
