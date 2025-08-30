@@ -3,7 +3,8 @@ let projects = [{
     projectTitle: "EZ-Access-Tool",
     description: `•  Developed and designed the EZ Access Tool, a centralized platform that streamlines developer workflows by organizing AWS URLs and application links in one place. This tool improves productivity, simplifies onboarding for new team members, and provides quick access to essential resources for tech leads and solution architects.`,
     link: {
-        "GitHub": "https://vinayakrevankar.com/ez-access-tool"
+    //     "GitHub": "https://vinayakrevankar.com/ez-access-tool"
+        "Website": "https://vinayakrevankar.com/ez-access-tool"
     }
 },
   {
