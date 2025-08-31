@@ -14,7 +14,8 @@ let projects = [{
     description: `•  Developed an interactive syllable puzzle game using Next.js, React, and GitHub Actions, featuring dynamic configurations that allow users to select different game setups, enhancing replayability and engagement.
     <br> •  Implemented real-time score tracking and user-friendly interfaces, enabling players to swap syllables and complete words while providing instant feedback and rewarding animations upon puzzle completion.`,
     link: {
-        "GitHub": "https://github.com/Vinayakrevankar/syllablast-game"
+        "GitHub": "https://github.com/Vinayakrevankar/syllablast-game",
+        "Live Demo": "https://vinayakrevankar.com/syllablast-game/"
     }
   },
   {
