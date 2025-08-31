@@ -5,7 +5,7 @@ let projects = [{
 •  This tool improves productivity, simplifies onboarding for new team members, and provides quick access to essential resources for tech leads and solution architects.`,
     link: {
     //     "GitHub": "https://vinayakrevankar.com/ez-access-tool"
-        "Website": "https://vinayakrevankar.com/ez-access-tool"
+        "Live Demo": "https://vinayakrevankar.com/ez-access-tool"
     }
 },
   {
