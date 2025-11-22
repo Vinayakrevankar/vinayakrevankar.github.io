@@ -57,39 +57,496 @@
 .badge1.badge-round.badge-tagged::before {
     left: 0.875rem;
 }
+
+/* Enhanced Project Section */
+#projects {
+    padding: 0;
+}
+
+#projectContent {
+    padding: 0.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+#projectContent hr {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    margin: 0;
+    opacity: 0.5;
+}
+
+/* Better spacing between projects */
+.container_project:not(:last-child) {
+    margin-bottom: 2rem;
+}
+
+/* Fade-in animation for projects */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container_project {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+.container_project:nth-child(1) { animation-delay: 0.1s; }
+.container_project:nth-child(2) { animation-delay: 0.2s; }
+.container_project:nth-child(3) { animation-delay: 0.3s; }
+.container_project:nth-child(4) { animation-delay: 0.4s; }
+.container_project:nth-child(5) { animation-delay: 0.5s; }
+.container_project:nth-child(6) { animation-delay: 0.6s; }
+.container_project:nth-child(7) { animation-delay: 0.7s; }
+.container_project:nth-child(8) { animation-delay: 0.8s; }
+
+/* Improved About Section */
+#aboutMe {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #5F6F81; /* Light mode color */
+    margin-bottom: 1.5rem;
+}
+
+/* Sidebar education text */
+.sidebar-education {
+    color: #8697A8;
+}
+
+/* Projects description */
+.projects-description {
+    color: #8697A8;
+}
+
+/* Enhanced Timeline Items */
+.timeline__item {
+    transition: all 0.3s ease;
+    padding-bottom: 1.5rem;
+    position: relative;
+}
+
+.timeline__item::after {
+    content: '';
+    position: absolute;
+    left: -1.375rem;
+    top: 0;
+    width: 2px;
+    height: 0;
+    background: #304CFD;
+    transition: height 0.3s ease;
+    z-index: 1;
+}
+
+.timeline__item:hover {
+    transform: translateX(4px);
+}
+
+.timeline__item:hover::after {
+    height: 100%;
+}
+
+.timeline__title {
+    transition: color 0.3s ease;
+}
+
+.timeline__item:hover .timeline__title {
+    color: #304CFD;
+}
+
+.timeline__item span {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.timeline__item span:hover {
+    text-decoration: underline;
+}
+
+/* Better Social Icons */
+.social__link {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background: rgba(48, 76, 253, 0.1);
+}
+
+.social__link:hover {
+    background: #304CFD;
+    color: #fff !important;
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 4px 12px rgba(48, 76, 253, 0.3);
+}
+
+/* Enhanced Box Shadows */
+.box.shadow {
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.box.shadow:hover {
+    box-shadow: 0 8px 32px rgba(103, 118, 128, 0.15) !important;
+}
+
+/* Better Title Separator */
+.title__separate::before {
+    transition: width 0.3s ease;
+}
+
+.title__separate:hover::before {
+    width: 4rem;
+}
+
+/* Improved Avatar */
+.avatar--180 {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.avatar--180:hover {
+    transform: scale(1.02);
+    filter: drop-shadow(0 8px 16px rgba(48, 76, 253, 0.2));
+}
+
+/* Enhanced Mode Toggle */
+#modeLight, #modeDark {
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#modeLight:hover, #modeDark:hover {
+    background: rgba(48, 76, 253, 0.1);
+    transform: rotate(15deg) scale(1.1);
+}
+
+/* Better Project Description */
+.text_project p {
+    margin-bottom: 1rem;
+}
+
+.text_project p br {
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+/* Smooth Scroll Behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Enhanced Focus States */
+a:focus,
+button:focus {
+    outline: 2px solid #304CFD;
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* Improved Color Contrast */
+.text_project p {
+    color: #44566C;
+}
+
+/* Better Readability */
+#aboutMe b {
+    color: #304CFD;
+    font-weight: 600;
+}
+
+/* Enhanced Section Spacing */
+.box {
+    margin-bottom: 1.5rem;
+}
+
+/* Improved Link Styling in Timeline */
+.timeline__item span {
+    color: inherit;
+    text-decoration: none;
+}
+
+.timeline__item span:hover {
+    color: #304CFD;
+    text-decoration: underline;
+}
+
+/* Better HR Styling */
+hr.color {
+    border: none;
+    border-top: 2px solid #304CFD;
+    opacity: 0.3;
+    margin: 1.5rem 0;
+}
+
+/* Enhanced Navigation Menu */
+.nav__item a {
+    position: relative;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+}
+
+.nav__item a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width 0.3s ease;
+}
+
+.nav__item a:hover::after,
+.nav__item a.active::after {
+    width: 80%;
+}
+
+.nav__item a.active {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Section scroll offset */
+#about,
+#experience,
+#projects {
+    scroll-margin-top: 120px;
+}
+
+/* Project Links Container */
+.project-links {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.project-link {
+    color: #304CFD;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    background: rgba(48, 76, 253, 0.08);
+    border: 2px solid rgba(48, 76, 253, 0.4);
+    font-size: 0.9rem;
+    box-shadow: 0 2px 4px rgba(48, 76, 253, 0.1);
+    outline: none;
+}
+
+.project-link:hover {
+    background: #304CFD;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(48, 76, 253, 0.3);
+    border-color: #304CFD;
+    border-width: 2px;
+}
+
+.project-link:focus {
+    outline: 2px solid rgba(48, 76, 253, 0.5);
+    outline-offset: 2px;
+}
+
+.project-link::before {
+    content: '→';
+    margin-right: 0.5rem;
+    transition: transform 0.2s ease;
+}
+
+.project-link:hover::before {
+    transform: translateX(2px);
+}
+
+/* Remove default hr styling in project content */
+#projectContent hr {
+    display: none;
+}
 .container_project {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     flex-wrap: wrap;
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto 2rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    border-radius: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
 }
+
+.container_project::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #304CFD 0%, #8c1aff 50%, #f60038 100%);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.container_project:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(48, 76, 253, 0.15), 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-color: rgba(48, 76, 253, 0.2);
+}
+
+.container_project:hover::before {
+    transform: scaleX(1);
+}
+
+.image_project {
+    flex-shrink: 0;
+    margin-right: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.container_project:hover .image_project {
+    transform: scale(1.05);
+}
+
+.image_project img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    border-radius: 12px;
+    background: #f8f9fa;
+    padding: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.container_project:hover .image_project img {
+    box-shadow: 0 8px 24px rgba(48, 76, 253, 0.2);
+}
+
 .text_project {
-    flex: 2;
+    flex: 1;
     min-width: 300px;
 }
-.text_project h2 {
+
+.text_project h4 {
     margin-top: 0;
+    margin-bottom: 0.75rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #304CFD;
+    transition: color 0.3s ease;
 }
+
+.container_project:hover .text_project h4 {
+    color: #1a3ae8;
+}
+
 .text_project p {
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
+    line-height: 1.7;
+    color: #5F6F81;
+    font-size: 0.95rem;
 }
+
 .text_project a {
-    color: #1e90ff;
+    color: #304CFD;
     text-decoration: none;
+    font-weight: 500;
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    display: inline-block;
+    margin-right: 0.5rem;
+    margin-top: 0.5rem;
 }
+
 .text_project a:hover {
-    text-decoration: underline;
+    background-color: rgba(48, 76, 253, 0.1);
+    color: #1a3ae8;
+    transform: translateY(-1px);
 }
+
 @media (max-width: 768px) {
     .container_project {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        padding: 1.25rem;
+        margin-bottom: 1.5rem;
     }
-    .image1 {
-        margin: 0 0 20px 0;
+    
+    .image_project {
+        margin: 0 0 1.25rem 0;
+    }
+    
+    .image_project img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .text_project {
+        min-width: 100%;
+        text-align: left;
+    }
+    
+    .text_project h4 {
+        font-size: 1.25rem;
+        text-align: center;
+    }
+    
+    .project-links {
+        justify-content: center;
+    }
+    
+    .project-link {
+        font-size: 0.85rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+@media (max-width: 580px) {
+    .container_project {
+        padding: 1rem;
+        margin-bottom: 1.25rem;
+    }
+    
+    .image_project img {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .text_project h4 {
+        font-size: 1.1rem;
+    }
+    
+    .text_project p {
+        font-size: 0.9rem;
+    }
+    
+    .project-link {
+        font-size: 0.8rem;
+        padding: 0.35rem 0.7rem;
     }
 } 
 
@@ -181,22 +638,32 @@
 .name-ruby {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center align text */
+    align-items: center;
 }
 
 .name-text {
-    font-size: 28px; /* Make the main name bigger */
+    font-size: 28px;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 .name-ruby rt {
-    font-size: 14px;  /* Smaller phonetic text */
-    color: gray;
+    font-size: 14px;
+    color: #8697A8;
     font-weight: normal;
-    line-height: 1.2; /* Adjust line height for better spacing */
+    line-height: 1.4;
+    margin-top: 0.25rem;
 }
 
 .speak-icon {
-    font-size: 12px; /* Adjust icon size */
+    font-size: 12px;
     cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    margin-left: 0.5rem;
+}
+
+.speak-icon:hover {
+    opacity: 1;
+    transform: scale(1.1);
 }

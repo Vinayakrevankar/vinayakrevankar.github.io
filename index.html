@@ -128,8 +128,8 @@
                            </ruby>
                         </h3>
                         <!-- <br> 🇮🇳|🇺🇸 </h3> -->
-                        <div> Master's in Computer Science at Worcester Polytechnic Institute 2025 <br></div>
-                        <hr class="color">
+                        <div class="sidebar-education" style="font-size: 0.9rem; margin-top: 0.5rem;"> Master's in Computer Science at Worcester Polytechnic Institute 2025 </div>
+                        <hr class="color" style="margin: 1.5rem 0;">
                         <span class="badge1 badge-primary" hidden>
                            Actively looking for internship for Spring 2025 <br>
                            <!-- <button class="badge1 badge-primary" style="color: black;"
@@ -174,12 +174,12 @@
                   <div class="box shadow pb-0">
                      <!-- Menu -->
                      <!-- About -->
-                     <div class="pb-0 pb-sm-2">
+                     <div id="about" class="pb-0 pb-sm-2" style="margin-bottom: 2rem;">
                         <h1 class="title title--h1 first-title title__separate">About Me</h1>
                         <p id="aboutMe"></p>
                      </div>
                      <!-- What -->
-                     <div class="pb-0">
+                     <div id="experience" class="pb-0">
                         <div class="row">
                            <div class="col-12 col-lg-6">
                               <h2 class="title title--h3"><img class="title-icon"
@@ -254,10 +254,10 @@
                   <br>
                   <div class="box shadow pb-0">
                      <div class="row">
-                        <div id="Projects">
-                           <div class="pb-0 pb-sm-2 pl-3">
+                        <div id="projects">
+                           <div class="pb-0 pb-sm-2 pl-3" style="margin-bottom: 2rem;">
                               <h1 class="title title--h1 first-title title__separate">Projects</h1>
-                              <p> All of the projects below demonstrate full-cycle development, independently executed from concept to completion. </p>
+                              <p class="projects-description" style="font-size: 1rem; line-height: 1.6; margin-top: 0.5rem;"> All of the projects below demonstrate full-cycle development, independently executed from concept to completion. </p>
                            </div>
                            <div id="projectContent">
                               
@@ -352,22 +352,68 @@
          }
          
          function generateProjectContainer({ imageSrc, projectTitle, description, link }) {
-         
+         	const linksHtml = link ? Object.keys(link).map(p => 
+         		`<a href="${link[p]}" target="_blank" rel="noopener noreferrer" class="project-link">
+         			${p.replace("_", " ")}
+         		</a>`
+         	).join('') : '';
+         	
          	return `<div class="container_project">
          		<div class="image_project">
-         			<img src="${imageSrc}" alt="${projectTitle}" style="width: 100px;height: 100px;margin-right:15px">
+         			<img src="${imageSrc}" alt="${projectTitle}">
          		</div>
          		<div class="text_project">
-         			<h4 class="title">${projectTitle}</h4>
-         			<p>${description} <br> ${ link ? Object.keys(link).map(p => `<a href="${link[p]}">${p.replace("_", " ")}</a>`).join("\n &nbsp; | &nbsp;") : ""}</p>
-         			
+         			<h4 class="title title--h4">${projectTitle}</h4>
+         			<p>${description}</p>
+         			${linksHtml ? `<div class="project-links">${linksHtml}</div>` : ''}
          		</div>
-         	</div><hr>`
+         	</div>`
          }
          
          projects.forEach(val => {
          	$('#projectContent').append(generateProjectContainer(val))
          })
+         
+         // Smooth scroll for navigation menu
+         $('.js-scroll').on('click', function(e) {
+         	e.preventDefault();
+         	var target = $(this).attr('href');
+         	if (target) {
+         		var targetElement = $(target);
+         		if (targetElement.length) {
+         			var offset = 100;
+         			$('html, body').animate({
+         				scrollTop: targetElement.offset().top - offset
+         			}, 800, 'swing');
+         			
+         			// Close menu on mobile after clicking
+         			if (window.innerWidth <= 580) {
+         				$('.hamburger').removeClass('is-active');
+         				$('.inner-menu').removeClass('is-active');
+         				$('body').removeClass('open-menu');
+         			}
+         			
+         			// Update active state
+         			$('.nav__item a').removeClass('active');
+         			$(this).addClass('active');
+         		}
+         	}
+         });
+         
+         // Update active nav item on scroll
+         $(window).on('scroll', function() {
+         	var scrollPos = $(window).scrollTop() + 150;
+         	
+         	$('.js-scroll').each(function() {
+         		var currLink = $(this);
+         		var refElement = $(currLink.attr('href'));
+         		if (refElement.length && refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+         			$('.nav__item a').removeClass('active');
+         			currLink.addClass('active');
+         		}
+         	});
+         });
+         
          // displaySaveContact();
          window.addEventListener("resize", displaySaveContact)
          let color = localStorage.getItem("mode") == "light" ? "black" : "white";

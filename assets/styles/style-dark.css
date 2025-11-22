@@ -48,63 +48,102 @@
 @import url("https://fonts.googleapis.com/css?family=Archivo:400,400i,500,500i,600,600i,700,700i&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Merriweather:400,900&display=swap");
 /* -----------------------------------------------------------------
-    - General Styles
+    - General Styles - ChatGPT Theme
 ----------------------------------------------------------------- */
 body {
-  background-color: #272333;
-  color: #DEDDE0;
+  background-color: #1e1e1e;
+  color: #ececf1;
 }
 
 .input, .textarea, select,
 .custom-select {
-  background-color: #2C283A;
-  border: 1px solid #2C283A;
-  color: #fff;
+  background-color: #343541;
+  border: 1px solid #565869;
+  color: #ececf1;
 }
 
 .input:focus, .textarea:focus, select:focus,
 .custom-select:focus {
-  background-color: #272333;
-  border: 1px solid #0D86FF;
-  color: #fff;
+  background-color: #40414f;
+  border: 1px solid #8ab4f8;
+  color: #ececf1;
 }
 
 .input--white {
-  background-color: #2C283A;
+  background-color: #343541;
 }
 .input--white:focus {
-  background-color: #2C283A;
+  background-color: #40414f;
 }
 
 .textarea--white {
-  background-color: #2C283A;
+  background-color: #343541;
 }
 .textarea--white:focus {
-  background-color: #2C283A;
+  background-color: #40414f;
 }
 
 .form-group .font-icon {
-  color: rgba(222, 221, 224, 0.5);
+  color: rgba(236, 236, 241, 0.5);
+}
+
+/* All icons in dark mode - ChatGPT Theme */
+.font-icon {
+  color: #ececf1 !important;
+}
+
+.title-icon {
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
+}
+
+.contacts-block .font-icon {
+  color: #ececf1 !important;
+}
+
+/* SVG icons (experience, education, etc.) */
+img.title-icon {
+  filter: brightness(0) invert(1) opacity(0.9);
+}
+
+/* Mode toggle icons */
+#modeLight svg,
+#modeDark svg {
+  fill: #ececf1 !important;
+}
+
+#modeLight:hover svg,
+#modeDark:hover svg {
+  fill: #8ab4f8 !important;
+}
+
+/* Speak icon */
+.speak-icon {
+  color: #ececf1 !important;
+}
+
+.speak-icon:hover {
+  color: #8ab4f8 !important;
 }
 
 .form-control::-webkit-input-placeholder {
-  color: rgba(222, 221, 224, 0.5);
+  color: rgba(236, 236, 241, 0.5);
 }
 
 .form-control::-moz-placeholder {
-  color: rgba(222, 221, 224, 0.5);
+  color: rgba(236, 236, 241, 0.5);
 }
 
 .form-control:-ms-input-placeholder {
-  color: rgba(222, 221, 224, 0.5);
+  color: rgba(236, 236, 241, 0.5);
 }
 
 .form-control::-ms-input-placeholder {
-  color: rgba(222, 221, 224, 0.5);
+  color: rgba(236, 236, 241, 0.5);
 }
 
 .form-control::placeholder {
-  color: rgba(222, 221, 224, 0.5);
+  color: rgba(236, 236, 241, 0.5);
 }
 
 input:-webkit-autofill,
@@ -115,21 +154,21 @@ input:-webkit-autofill:active {
 }
 
 .custom-control-input:focus ~ .custom-control-label::before {
-  box-shadow: 0 0 0 0.125rem rgba(13, 134, 255, 0.25);
+  box-shadow: 0 0 0 0.125rem rgba(138, 180, 248, 0.25);
 }
 .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
-  border-color: #0D86FF;
+  border-color: #8ab4f8;
 }
 .custom-control-input:not(:disabled):active ~ .custom-control-label::before {
-  border-color: #8697A8;
+  border-color: #565869;
 }
 .custom-control-input:checked ~ .custom-control-label::before {
-  border-color: #0D86FF;
-  background-color: #0D86FF;
+  border-color: #8ab4f8;
+  background-color: #8ab4f8;
 }
 
 .custom-control-label::before {
-  border: 1px solid #8697A8;
+  border: 1px solid #565869;
 }
 
 select,
@@ -142,84 +181,87 @@ select option,
 }
 
 .dropdown-menu {
-  background-color: #302C40;
-  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
-  color: #DEDDE0;
+  background-color: #343541;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.7);
+  color: #ececf1;
+  border: 1px solid #565869;
 }
 .dropdown-menu::before {
-  border-bottom: 0.4rem solid #302C40;
+  border-bottom: 0.4rem solid #343541;
 }
 .dropdown.dropup .dropdown-menu::before {
-  border-top: 0.4rem solid #302C40;
+  border-top: 0.4rem solid #343541;
 }
 
 .progress {
-  background-color: #302C40;
+  background-color: #343541;
 }
 .progress-bar {
-  background-color: #0D86FF;
+  background-color: #8ab4f8;
 }
 
 .badge--blue {
-  background-color: #0D86FF;
+  background-color: #8ab4f8;
 }
 
 .badge--dark {
-  background-color: #272333;
+  background-color: #2d2d2d;
 }
 
 .tooltip-inner {
-  background-color: #302C40;
-  box-shadow: 0px 16px 48px rgba(0, 0, 0, 0.25), 0px 2px 32px rgba(0, 0, 0, 0.5);
+  background-color: #343541;
+  box-shadow: 0px 16px 48px rgba(0, 0, 0, 0.5), 0px 2px 32px rgba(0, 0, 0, 0.7);
+  border: 1px solid #565869;
 }
 
 .bs-tooltip-top .arrow::before,
 .bs-tooltip-auto[x-placement^="top"] .arrow::before {
-  border-top-color: #302C40;
+  border-top-color: #343541;
 }
 
 .bs-tooltip-right .arrow::before,
 .bs-tooltip-auto[x-placement^="right"] .arrow::before {
-  border-right-color: #302C40;
+  border-right-color: #343541;
 }
 
 .bs-tooltip-left .arrow::before,
 .bs-tooltip-auto[x-placement^="left"] .arrow::before {
-  border-left-color: #302C40;
+  border-left-color: #343541;
 }
 
 .bs-tooltip-bottom .arrow::before,
 .bs-tooltip-auto[x-placement^="bottom"] .arrow::before {
-  border-bottom-color: #302C40;
+  border-bottom-color: #343541;
 }
 
 .btn {
-  background-color: #0D86FF;
-  box-shadow: 0 0.5rem 1rem rgba(13, 134, 255, 0.15), 0 0.125rem 0.25rem rgba(13, 134, 255, 0.15);
+  background-color: #8ab4f8;
+  box-shadow: 0 0.5rem 1rem rgba(138, 180, 248, 0.15), 0 0.125rem 0.25rem rgba(138, 180, 248, 0.15);
+  color: #1e1e1e;
 }
 .btn:focus {
-  box-shadow: 0 1.5rem 2.5rem rgba(13, 134, 255, 0.1), 0 0.5rem 1rem rgba(13, 134, 255, 0.1);
+  box-shadow: 0 1.5rem 2.5rem rgba(138, 180, 248, 0.1), 0 0.5rem 1rem rgba(138, 180, 248, 0.1);
 }
 .btn::before {
   content: '';
-  box-shadow: 0 0.25rem 2rem rgba(13, 134, 255, 0.25), 0 0.25rem 1rem rgba(13, 134, 255, 0.25);
+  box-shadow: 0 0.25rem 2rem rgba(138, 180, 248, 0.25), 0 0.25rem 1rem rgba(138, 180, 248, 0.25);
 }
 
 /* -----------------------------------------------------------------
-    - Typography
+    - Typography - ChatGPT Theme
 ----------------------------------------------------------------- */
 .title {
-  color: #F1F2F4;
+  color: #ececf1;
 }
 .title--tone {
-  color: #0D86FF;
+  color: #8ab4f8;
 }
 .title__separate::before {
-  background-color: #0D86FF;
+  background-color: #8ab4f8;
 }
 
 .color--light {
-  color: rgba(241, 242, 244, 0.5);
+  color: rgba(236, 236, 241, 0.6);
 }
 
 .block-quote::before {
@@ -230,61 +272,62 @@ select option,
 }
 
 a {
-  color: #0D86FF;
+  color: #8ab4f8;
 }
 a:hover {
-  color: #0D86FF;
+  color: #a5c5ff;
 }
 
 ::-moz-selection {
-  background: transparent;
-  color: #0D86FF;
+  background: rgba(138, 180, 248, 0.3);
+  color: #ececf1;
 }
 
 ::selection {
-  background: transparent;
-  color: #0D86FF;
+  background: rgba(138, 180, 248, 0.3);
+  color: #ececf1;
 }
 
 /* -----------------------------------------------------------------
-    - Preloader
+    - Preloader - ChatGPT Theme
 ----------------------------------------------------------------- */
 .preloader {
-  background-color: #272333;
+  background-color: #1e1e1e;
 }
 .preloader__progress span {
-  background: #0D86FF;
+  background: #8ab4f8;
 }
 
 .circle-pulse__1 {
-  background-color: #0D86FF;
+  background-color: #8ab4f8;
 }
 
 .circle-pulse__2 {
-  background-color: rgba(13, 134, 255, 0.7);
+  background-color: rgba(138, 180, 248, 0.7);
 }
 
 /* -----------------------------------------------------------------
-    - Sidebar
+    - Sidebar - ChatGPT Theme
 ----------------------------------------------------------------- */
 .contacts-block {
   margin-bottom: 1rem;
 }
 .contacts-block__item a {
-  color: #DEDDE0;
+  color: #ececf1;
 }
 .contacts-block__item a:hover {
-  color: #0D86FF;
+  color: #8ab4f8;
 }
 
 /* -----------------------------------------------------------------
-    - Sections
+    - Sections - ChatGPT Theme
 ----------------------------------------------------------------- */
 .box {
-  background-color: #302C40;
+  background-color: #343541;
+  border: 1px solid #565869;
 }
 .box__second {
-  background-color: #2C283A;
+  background-color: #2d2d2d;
 }
 
 .box-inner {
@@ -296,10 +339,10 @@ a:hover {
 }
 
 .shadow {
-  box-shadow: 0px 40px 50px rgba(32, 29, 42, 0.75) !important;
+  box-shadow: 0px 40px 50px rgba(0, 0, 0, 0.5) !important;
 }
 .shadow::before {
-  box-shadow: 0px 40px 50px rgba(32, 29, 42, 0.75);
+  box-shadow: 0px 40px 50px rgba(0, 0, 0, 0.5);
 }
 
 .avatar--180 {
@@ -313,93 +356,99 @@ a:hover {
 }
 
 .social__link {
-  color: #fff;
+  color: #ececf1 !important;
+}
+
+.social__link .font-icon {
+  color: #ececf1 !important;
 }
 
 /* -----------------------------------------------------------------
-    - Navbar
+    - Navbar - ChatGPT Theme
 ----------------------------------------------------------------- */
 .circle-menu {
-  background-color: #0D86FF;
+  background-color: #8ab4f8;
 }
 @media only screen and (max-width: 580px) {
   .open-menu .circle-menu {
-    box-shadow: 0 0 0 0.0625rem rgba(13, 134, 255, 0.5);
+    box-shadow: 0 0 0 0.0625rem rgba(138, 180, 248, 0.5);
   }
 }
 
 @media only screen and (max-width: 580px) {
   .hamburger.is-active .line {
-    background-color: #0D86FF;
+    background-color: #8ab4f8;
   }
 }
 
 .nav {
-  background: #0D86FF;
-  box-shadow: 0 1.5rem 2.5rem rgba(13, 134, 255, 0.05), 0 0.5rem 1rem rgba(13, 134, 255, 0.05);
+  background: #8ab4f8;
+  box-shadow: 0 1.5rem 2.5rem rgba(138, 180, 248, 0.1), 0 0.5rem 1rem rgba(138, 180, 248, 0.1);
 }
 @media only screen and (max-width: 580px) {
   .nav {
     color: #fff;
-    background-color: #302C40;
+    background-color: #343541;
+    border: 1px solid #565869;
   }
 }
 @media only screen and (max-width: 580px) {
   .nav__item a {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(236, 236, 241, 0.8);
   }
   .nav__item a:hover {
-    color: white;
+    color: #ececf1;
   }
 }
 @media only screen and (max-width: 580px) {
   .nav__item a.active {
-    color: #fff;
+    color: #8ab4f8;
   }
 }
 
 /* -----------------------------------------------------------------
-    - Cases
+    - Cases - ChatGPT Theme
 ----------------------------------------------------------------- */
 .case-item__caption {
-  color: #DEDDE0;
+  color: #ececf1;
 }
 
 /* -----------------------------------------------------------------
-    - Testimonials
+    - Testimonials - ChatGPT Theme
 ----------------------------------------------------------------- */
 .review-item {
-  background-color: #2C283A;
+  background-color: #343541;
   background-image: url(../icons/dark/icon-quote.svg);
+  border: 1px solid #565869;
 }
 .review-item__caption {
-  color: #DEDDE0;
+  color: #ececf1;
 }
 
 .swiper-pagination-bullet {
-  background: #272333;
+  background: #565869;
 }
 .swiper-pagination-bullet__item::before {
-  background-color: #0D86FF;
-  box-shadow: 0 0 0 0.1875rem rgba(13, 134, 255, 0.25);
+  background-color: #8ab4f8;
+  box-shadow: 0 0 0 0.1875rem rgba(138, 180, 248, 0.25);
 }
 .swiper-pagination-bullet-active {
-  background: #0D86FF;
+  background: #8ab4f8;
 }
 
 /* -----------------------------------------------------------------
-    - Timeline
+    - Timeline - ChatGPT Theme
 ----------------------------------------------------------------- */
 .timeline__item {
-  border-left: 1px solid rgba(255, 255, 255, 0.15);
+  border-left: 1px solid #565869;
 }
 .timeline__item::before {
   content: '';
-  background-color: #0D86FF;
-  box-shadow: 0 0 0 0.1875rem rgba(13, 134, 255, 0.25);
+  background-color: #8ab4f8;
+  box-shadow: 0 0 0 0.1875rem rgba(138, 180, 248, 0.25);
 }
 .timeline__period {
-  color: rgba(222, 221, 224, 0.5);
+  color: rgba(236, 236, 241, 0.6);
 }
 
 /* -----------------------------------------------------------------
@@ -547,5 +596,246 @@ a:hover {
 }
 
 .medium-zoom-overlay {
-  background: #272333 !important;
+  background: #1e1e1e !important;
+}
+
+/* Dark Mode Project Cards - ChatGPT Theme */
+.container_project {
+  background: #343541;
+  border: 1px solid #565869;
+}
+
+.container_project:hover {
+  border-color: #8ab4f8;
+  box-shadow: 0 12px 40px rgba(138, 180, 248, 0.15), 0 4px 12px rgba(0, 0, 0, 0.5);
+  background: #40414f;
+}
+
+.image_project img {
+  background: #2d2d2d;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.container_project:hover .image_project img {
+  box-shadow: 0 8px 24px rgba(138, 180, 248, 0.2);
+}
+
+.text_project h4 {
+  color: #8ab4f8;
+}
+
+.container_project:hover .text_project h4 {
+  color: #a5c5ff;
+}
+
+.text_project p {
+  color: #ececf1;
+}
+
+.project-link {
+  background: #2d2d2d;
+  border: 2px solid #565869 !important;
+  color: #ececf1 !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  outline: none;
+}
+
+.project-link:hover {
+  background: #40414f;
+  color: #8ab4f8 !important;
+  border-color: #8ab4f8 !important;
+  border-width: 2px;
+  box-shadow: 0 4px 12px rgba(138, 180, 248, 0.2);
+}
+
+.project-link:focus {
+  outline: 2px solid #8ab4f8;
+  outline-offset: 2px;
+}
+
+.project-link::before {
+  color: #ececf1 !important;
+}
+
+.project-link:hover::before {
+  color: #8ab4f8 !important;
+}
+
+#projectContent hr {
+  border-top-color: #565869;
+}
+
+.social__link {
+  background: #343541;
+  border: 1px solid #565869;
+  color: #ececf1 !important;
+}
+
+.social__link .font-icon {
+  color: #ececf1 !important;
+}
+
+.social__link:hover {
+  background: #40414f;
+  border-color: #565869;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.social__link:hover .font-icon {
+  color: #ececf1 !important;
+}
+
+.name-ruby rt {
+  color: rgba(236, 236, 241, 0.6);
+}
+
+/* Dark Mode Text Improvements - ChatGPT Theme */
+.text_project p {
+  color: #ececf1 !important;
+}
+
+#aboutMe {
+  color: #ececf1 !important;
+}
+
+#aboutMe p {
+  color: #ececf1 !important;
+}
+
+#aboutMe b {
+  color: #ececf1 !important;
+  font-weight: 700;
+}
+
+/* Sidebar text in dark mode - ChatGPT Theme */
+.sidebar__user-name {
+  color: #ececf1 !important;
+}
+
+.sidebar > div {
+  color: #ececf1 !important;
+}
+
+.sidebar .text-center > div {
+  color: rgba(236, 236, 241, 0.8) !important;
+}
+
+/* Override inline styles in dark mode */
+.sidebar-education {
+  color: rgba(222, 221, 224, 0.9) !important;
+}
+
+.projects-description {
+  color: rgba(222, 221, 224, 0.8) !important;
+}
+
+/* Timeline text - ChatGPT Theme */
+.timeline__title {
+  color: #ececf1 !important;
+}
+
+.timeline__description {
+  color: #ececf1 !important;
+}
+
+.timeline__item span {
+  color: #ececf1 !important;
+}
+
+.timeline__item span:hover {
+  color: #8ab4f8 !important;
+}
+
+.timeline__item h5,
+.timeline__item h6 {
+  color: #ececf1 !important;
+}
+
+.timeline__item .title {
+  color: #ececf1 !important;
+}
+
+/* Project section description - ChatGPT Theme */
+#projects p {
+  color: rgba(236, 236, 241, 0.8) !important;
+}
+
+/* Name ruby text */
+.name-ruby rt {
+  color: rgba(236, 236, 241, 0.7) !important;
+}
+
+/* General paragraph and text colors */
+p {
+  color: #ececf1 !important;
+}
+
+.box p {
+  color: #ececf1 !important;
+}
+
+/* All headings in dark mode */
+h1, h2, h3, h4, h5, h6 {
+  color: #ececf1 !important;
+}
+
+.title {
+  color: #ececf1 !important;
+}
+
+/* Sidebar content text */
+.sidebar div {
+  color: #ececf1 !important;
+}
+
+/* Box content text - be more specific to avoid conflicts */
+.box {
+  color: #DEDDE0;
+}
+
+.box .title,
+.box h1,
+.box h2,
+.box h3,
+.box h4,
+.box h5,
+.box h6 {
+  color: #ececf1 !important;
+}
+
+.box p,
+.box div:not(.title):not(.timeline__title) {
+  color: #ececf1 !important;
+}
+
+/* Education section text */
+.timeline__period {
+  color: rgba(222, 221, 224, 0.7) !important;
+}
+
+hr.color {
+  border-top-color: #565869;
+}
+
+/* Dark Mode Navigation - ChatGPT Theme */
+.nav__item a::after {
+  background: #8ab4f8;
+}
+
+.nav__item a.active {
+  background: rgba(138, 180, 248, 0.15);
+}
+
+#about,
+#experience,
+#projects {
+  scroll-margin-top: 120px;
+}
+
+.sidebar-education {
+  color: rgba(236, 236, 241, 0.8) !important;
+}
+
+.projects-description {
+  color: rgba(236, 236, 241, 0.8) !important;
 }
