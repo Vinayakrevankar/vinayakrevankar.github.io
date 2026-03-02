@@ -1,14 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap');
 
 :root {
-    /* Color Palette - Premium Dark Theme First */
-    --clr-bg: #030304;
-    --clr-bg-alt: #0a0a0c;
-    --clr-primary: #6366f1;
-    /* Sophisticated Indigo */
-    --clr-primary-light: #818cf8;
-    --clr-accent: #a855f7;
-    /* Muted Violet */
+    /* Color Palette - Neutral, professional dark theme */
+    --clr-bg: #0b1017;
+    --clr-bg-alt: #121925;
+    --clr-primary: #2563eb;
+    --clr-primary-light: #3b82f6;
+    --clr-accent: #0f766e;
     --clr-surface: rgba(255, 255, 255, 0.02);
     --clr-surface-hover: rgba(255, 255, 255, 0.05);
     --clr-text: #f8fafc;
@@ -16,7 +14,7 @@
     --clr-border: rgba(255, 255, 255, 0.08);
     --clr-border-hover: rgba(255, 255, 255, 0.15);
 
-    --glass-bg: rgba(10, 10, 15, 0.9);
+    --glass-bg: rgba(12, 18, 28, 0.9);
     --glass-border: rgba(255, 255, 255, 0.1);
     --glass-blur: blur(2px);
     --glass-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
@@ -34,20 +32,20 @@
     --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 
-    /* Cyber Tech Theme Extras */
-    --clr-cyber-neon: #00ff9f;
-    --clr-cyber-pink: #ff00ff;
-    --clr-cyber-yellow: #f0f000;
-    --clr-cyber-blue: #00d4ff;
-    --cyber-glow: 0 0 10px var(--clr-cyber-neon), 0 0 20px rgba(0, 255, 159, 0.3);
+    /* Kept for legacy selectors, toned down to professional hues */
+    --clr-cyber-neon: #2dd4bf;
+    --clr-cyber-pink: #60a5fa;
+    --clr-cyber-yellow: #f59e0b;
+    --clr-cyber-blue: #38bdf8;
+    --cyber-glow: 0 0 10px rgba(45, 212, 191, 0.25), 0 0 20px rgba(45, 212, 191, 0.15);
 }
 
 [data-theme="light"] {
-    --clr-bg: #f8f9fc;
+    --clr-bg: #f5f7fb;
     --clr-bg-alt: #ffffff;
-    --clr-primary: #2135b7;
-    --clr-primary-light: #304CFD;
-    --clr-accent: #7a14e0;
+    --clr-primary: #1d4ed8;
+    --clr-primary-light: #2563eb;
+    --clr-accent: #0f766e;
     --clr-surface: rgba(0, 0, 0, 0.02);
     --clr-surface-hover: rgba(0, 0, 0, 0.05);
     --clr-text: #1a1a2e;
@@ -61,12 +59,12 @@
 
 /* Glowing Typography */
 .text-gradient {
-    background: linear-gradient(90deg, var(--clr-primary), var(--clr-accent), var(--clr-cyber-neon), var(--clr-primary));
-    background-size: 300% auto;
+    background: linear-gradient(90deg, var(--clr-primary), var(--clr-accent));
+    background-size: 160% auto;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: shine 8s linear infinite;
+    animation: shine 14s linear infinite;
     font-weight: 800;
 }
 
@@ -421,8 +419,8 @@ body::before {
 
 [data-theme="dark"] body {
     background-image:
-        linear-gradient(rgba(99, 102, 241, 0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(99, 102, 241, 0.05) 1px, transparent 1px);
+        linear-gradient(rgba(37, 99, 235, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(37, 99, 235, 0.04) 1px, transparent 1px);
     background-size: 40px 40px;
     background-attachment: fixed;
 }
@@ -813,8 +811,8 @@ img {
     display: flex;
     align-items: center;
     padding-top: 80px;
-    background: radial-gradient(circle at 10% 20%, rgba(48, 76, 253, 0.05) 0%, transparent 40%),
-        radial-gradient(circle at 90% 80%, rgba(140, 26, 255, 0.05) 0%, transparent 40%);
+    background: radial-gradient(circle at 10% 20%, rgba(37, 99, 235, 0.05) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(15, 118, 110, 0.05) 0%, transparent 40%);
 }
 
 .hero-content {
@@ -895,12 +893,12 @@ img {
 .btn-primary {
     background: var(--clr-primary);
     color: white;
-    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.2);
+    box-shadow: 0 10px 30px rgba(37, 99, 235, 0.2);
 }
 
 .btn-primary:hover {
     transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.4);
+    box-shadow: 0 20px 40px rgba(37, 99, 235, 0.35);
 }
 
 .btn-outline {
@@ -937,7 +935,7 @@ img {
     padding: 1.5rem;
     border-radius: 30px;
     position: relative;
-    background: linear-gradient(90deg, rgba(99, 102, 241, 0.1), rgba(168, 85, 247, 0.1));
+    background: linear-gradient(90deg, rgba(37, 99, 235, 0.1), rgba(15, 118, 110, 0.1));
 }
 
 .hero-badge {
