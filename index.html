@@ -65,14 +65,6 @@
 
 <body data-theme="dark">
    <div class="scanline-overlay"></div>
-   <div class="system-console">
-      <div class="console-header">
-         <span>SYS_KERNEL_v1.0.4</span>
-         <span>[ONLINE]</span>
-      </div>
-      <div id="consoleLines"></div>
-      <div class="console-cursor-wrap">> <span class="console-cursor"></span></div>
-   </div>
    <div class="custom-cursor" id="customCursor"></div>
    <!-- Animated Background Blobs -->
    <div class="bg-blobs">
@@ -85,7 +77,7 @@
    <header class="header glass">
       <div class="container nav-content">
          <div class="logo">
-            <span class="text-gradient glitch" data-text="Vinayak.">Vinayak.</span>
+           <span class="text-gradient">Vinayak.</span>
          </div>
          <nav class="nav">
             <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
@@ -114,8 +106,7 @@
             <div class="hero-text">
                <h1 class="hero-title">
                   I'm <span
-                     class="text-gradient glitch name-pronounce-trigger"
-                     data-text="Vinayak Revankar"
+                    class="text-gradient name-pronounce-trigger"
                      role="button"
                      tabindex="0"
                      aria-label="Pronounce Vinayak Revankar"
@@ -477,37 +468,6 @@
          // Initialize Reveal Observer
          document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-         // System Console Typing Animation
-         const consoleLines = [
-            "Initializing neural link...",
-            "Loading portfolio assets...",
-            "Optimizing user experience...",
-            "System ready.",
-            "Welcome, user."
-         ];
-         const consoleContainer = document.getElementById('consoleLines');
-         let lineIndex = 0;
-
-         function addConsoleLine() {
-            if (lineIndex < consoleLines.length) {
-               const line = document.createElement('div');
-               line.className = 'console-line';
-               line.textContent = `> ${consoleLines[lineIndex]}`;
-               consoleContainer.appendChild(line);
-
-               // Trigger animation
-               setTimeout(() => line.classList.add('active'), 50);
-
-               lineIndex++;
-
-               // Scroll to bottom if needed
-               const consoleWrap = document.querySelector('.system-console');
-               consoleWrap.scrollTop = consoleWrap.scrollHeight;
-
-               setTimeout(addConsoleLine, 1000 + Math.random() * 2000);
-            }
-         }
-         addConsoleLine();
       });
 
       function openWebsite(url) {
