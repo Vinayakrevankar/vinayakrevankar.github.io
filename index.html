@@ -50,8 +50,8 @@
    <link rel="manifest" href="/site.webmanifest">
 
    <!-- Theme colors (optional but nice for mobile status bars) -->
-   <meta name="theme-color" content="#062E24">
-   <meta name="msapplication-TileColor" content="#062E24">
+   <meta name="theme-color" content="#050505">
+   <meta name="msapplication-TileColor" content="#050505">
 
 
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -64,120 +64,80 @@
 <!-- bg-triangle  -->
 
 <body data-theme="dark">
-   <div class="scanline-overlay"></div>
-   <div class="custom-cursor" id="customCursor"></div>
-   <!-- Animated Background Blobs -->
-   <div class="bg-blobs">
-      <div class="blob blob-1"></div>
-      <div class="blob blob-2"></div>
-      <div class="blob blob-3"></div>
-   </div>
-
+   <a href="#main-content" class="skip-link">Skip to content</a>
    <!-- Navbar -->
-   <header class="header glass">
+   <header class="header panel">
       <div class="container nav-content">
          <div class="logo">
-           <span class="text-gradient">Vinayak.</span>
+           Vinayak Revankar
          </div>
-         <nav class="nav">
-            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
-               <i class="fas fa-bars"></i>
+         <nav class="nav" aria-label="Primary">
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navList">
+               <i class="fas fa-bars" aria-hidden="true"></i>
             </button>
             <ul class="nav-list" id="navList">
                <li><a href="#about" class="nav-link">About</a></li>
                <li><a href="#experience" class="nav-link">Experience</a></li>
                <li><a href="#projects" class="nav-link">Projects</a></li>
                <li class="nav-socials-mobile">
-                  <a href="https://github.com/Vinayakrevankar" target="_blank" class="nav-link"><i
-                        class="fab fa-github"></i></a>
-                  <a href="https://in.linkedin.com/in/vinayakrevankar" target="_blank" class="nav-link"><i
-                        class="fab fa-linkedin"></i></a>
+                  <a href="https://github.com/Vinayakrevankar" target="_blank" rel="noopener noreferrer" class="nav-link" aria-label="GitHub (opens in a new tab)"><i
+                        class="fab fa-github" aria-hidden="true"></i></a>
+                  <a href="https://in.linkedin.com/in/vinayakrevankar" target="_blank" rel="noopener noreferrer" class="nav-link" aria-label="LinkedIn (opens in a new tab)"><i
+                        class="fab fa-linkedin" aria-hidden="true"></i></a>
                </li>
-               <li><button id="themeToggle" class="theme-btn"><i class="fas fa-moon"></i></button></li>
+               <li><button id="themeToggle" class="theme-btn" aria-label="Switch to light theme" aria-pressed="false"><i class="fas fa-moon" aria-hidden="true"></i></button></li>
             </ul>
          </nav>
       </div>
    </header>
 
-   <main>
+   <main id="main-content">
       <!-- Hero Section -->
       <section class="hero-section" id="hero">
          <div class="container hero-content reveal">
-            <div class="hero-text">
-               <h1 class="hero-title">
-                  I'm <span
-                    class="text-gradient name-pronounce-trigger"
-                     role="button"
-                     tabindex="0"
-                     aria-label="Pronounce Vinayak Revankar"
-                     onclick="pronounceName()"
-                     onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();pronounceName();}"
-                     >Vinayak Revankar</span>
-               </h1>
-               <h2 class="hero-subtitle">Software Engineer</h2>
-               <p class="hero-description">
-                  Meticulous and action-oriented developer with 6 years of experience. I build scalable, reliable
-                  software applications and lead high-performing teams.
-               </p>
-               <div class="hero-social-links">
-                  <a href="https://github.com/Vinayakrevankar" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                     <i class="fab fa-github"></i>
-                  </a>
-                  <a href="https://in.linkedin.com/in/vinayakrevankar" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                     <i class="fab fa-linkedin"></i>
-                  </a>
+            <h1 class="hero-title"><span class="title-line">Vinayak</span><span class="title-line">Revankar</span></h1>
+            <div class="hero-lower">
+               <div class="hero-text">
+                  <p class="hero-description">
+                     Meticulous and action-oriented developer with <span id="heroYearsDesc">6</span> years of experience. I build scalable, reliable
+                     software applications and lead high-performing teams.
+                  </p>
+                  <div class="hero-actions">
+                     <a href="mailto:vinayakanrevankar@gmail.com" class="btn btn-primary">Get in Touch</a>
+                     <a href="#projects" class="btn btn-outline">View Projects</a>
+                  </div>
+                  <div class="hero-social-links">
+                     <a href="https://github.com/Vinayakrevankar" target="_blank" rel="noopener noreferrer" aria-label="GitHub (opens in a new tab)">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                     </a>
+                     <a href="https://in.linkedin.com/in/vinayakrevankar" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in a new tab)">
+                        <i class="fab fa-linkedin" aria-hidden="true"></i>
+                     </a>
+                  </div>
                </div>
-               <!-- <div class="hero-btns">
-                  <a href="#projects" class="btn btn-primary">Featured Work</a>
-                  <a href="#" class="btn btn-outline"><i class="fas fa-file-download" style="margin-right: 8px;"></i>
-                     View Resume</a>
-               </div> -->
-            </div>
-            <div class="hero-image reveal">
-               <div class="image-glass glass cyber-corners">
-                  <img src="assets/img/myphotoV1.jpg" alt="Vinayak Revankar" class="profile-img">
-                 
+               <div class="hero-image reveal">
+                  <div class="image-card">
+                     <img src="assets/img/myphotoV1.jpg" alt="Vinayak Revankar" class="profile-img">
+                  </div>
                </div>
             </div>
          </div>
          <div class="scroll-indicator">
-            <div class="mouse">
-               <div class="wheel"></div>
-            </div>
-            <span
-               style="font-size: 0.7rem; color: var(--clr-text-muted); text-transform: uppercase; letter-spacing: 0.1em;">Scroll</span>
+            <div class="scroll-line"></div>
+            <span>Scroll</span>
          </div>
       </section>
 
-      <div class="skills-marquee">
-         <div class="marquee-content">
-            <span class="marquee-item">Python</span>
-            <span class="marquee-item">AWS</span>
-            <span class="marquee-item">React</span>
-            <span class="marquee-item">React Native</span>
-            <span class="marquee-item">Node.js</span>
-            <span class="marquee-item">JavaScript</span>
-            <span class="marquee-item">TypeScript</span>
-            <span class="marquee-item">Java</span>
-            <span class="marquee-item">Docker</span>
-            <!-- Duplicate for infinite scroll -->
-            <span class="marquee-item">Python</span>
-            <span class="marquee-item">AWS</span>
-            <span class="marquee-item">React</span>
-            <span class="marquee-item">React Native</span>
-            <span class="marquee-item">Node.js</span>
-            <span class="marquee-item">JavaScript</span>
-            <span class="marquee-item">TypeScript</span>
-            <span class="marquee-item">Java</span>
-            <span class="marquee-item">Docker</span>
-         </div>
-      </div>
-
       <section class="about-section section" id="about">
          <div class="container reveal">
-            <h2 class="section-title"><span>About Me</span></h2>
-            <div class="about-content">
-               <p id="aboutMe" class="about-text"></p>
+            <h2 class="section-title"><span>About</span></h2>
+            <div class="about-grid">
+               <div class="about-content">
+                  <p id="aboutMe" class="about-text"></p>
+               </div>
+               <dl class="about-stats" id="aboutStats">
+                  <!-- Dynamic content -->
+               </dl>
             </div>
          </div>
       </section>
@@ -185,28 +145,39 @@
       <!-- Experience & Education Section -->
       <section class="experience-section section" id="experience">
          <div class="container">
+            <h2 class="section-title reveal"><span>Experience</span></h2>
             <div class="experience-grid">
                <div class="experience-col reveal">
-                  <h3 class="subsection-title"><i class="fas fa-briefcase"></i> Experience</h3>
+                  <h3 class="subsection-title"><i class="fas fa-briefcase" aria-hidden="true"></i> Experience</h3>
                   <div class="timeline" id="ListOfCompanies">
                      <!-- Dynamic content -->
                   </div>
                </div>
                <div class="education-col reveal">
-                  <h3 class="subsection-title"><i class="fas fa-graduation-cap"></i> Education</h3>
+                  <h3 class="subsection-title"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Education</h3>
                   <div class="timeline">
-                     <article class="timeline-item glass">
-                        <div class="timeline-dot"></div>
-                        <h4 class="timeline-title">Master's in Computer Science</h4>
-                        <p class="timeline-org">Worcester Polytechnic Institute</p>
+                     <a class="timeline-item reveal" data-i="0" href="https://www.wpi.edu/" target="_blank" rel="noopener noreferrer">
+                        <div class="timeline-dot" aria-hidden="true"></div>
+                        <div class="timeline-header">
+                           <img src="assets/images/company-logos/wpi.png" alt="" class="company-logo" loading="lazy">
+                           <div>
+                              <h4 class="timeline-title">Master's in Computer Science<span class="visually-hidden"> (opens Worcester Polytechnic Institute website in a new tab)</span></h4>
+                              <p class="timeline-org">Worcester Polytechnic Institute</p>
+                           </div>
+                        </div>
                         <p class="timeline-date">2024 — 2025</p>
-                     </article>
-                     <article class="timeline-item glass">
-                        <div class="timeline-dot"></div>
-                        <h4 class="timeline-title">Bachelor of Engineering</h4>
-                        <p class="timeline-org">KLS Gogte Institute of Technology</p>
+                     </a>
+                     <a class="timeline-item reveal" data-i="1" href="https://git.edu/" target="_blank" rel="noopener noreferrer">
+                        <div class="timeline-dot" aria-hidden="true"></div>
+                        <div class="timeline-header">
+                           <img src="assets/images/company-logos/gogte-institute.png" alt="" class="company-logo" loading="lazy">
+                           <div>
+                              <h4 class="timeline-title">Bachelor of Engineering<span class="visually-hidden"> (opens KLS Gogte Institute of Technology website in a new tab)</span></h4>
+                              <p class="timeline-org">KLS Gogte Institute of Technology</p>
+                           </div>
+                        </div>
                         <p class="timeline-date">2015 — 2019</p>
-                     </article>
+                     </a>
                   </div>
                </div>
             </div>
@@ -224,29 +195,18 @@
       </section>
    </main>
 
-   <footer class="footer glass">
+   <footer class="footer panel">
       <div class="container footer-content">
-         <p>&copy; 2025 Vinayak Revankar. Built with <i class="fas fa-heart" style="color: #ff4d4d;"></i></p>
+         <p>&copy; <span id="footerYear"></span> Vinayak Revankar. Built with <i class="fas fa-heart" style="color: #ff4d4d;" aria-hidden="true"></i></p>
          <div class="footer-social">
-            <a href="https://github.com/Vinayakrevankar" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://in.linkedin.com/in/vinayakrevankar" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:vinayakanrevankar@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com/Vinayakrevankar" target="_blank" rel="noopener noreferrer" aria-label="GitHub (opens in a new tab)"><i class="fab fa-github" aria-hidden="true"></i></a>
+            <a href="https://in.linkedin.com/in/vinayakrevankar" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in a new tab)"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+            <a href="mailto:vinayakanrevankar@gmail.com" aria-label="Email Vinayak Revankar"><i class="fas fa-envelope" aria-hidden="true"></i></a>
          </div>
       </div>
    </footer>
 
-   <div class="back-to-top glass"><i class="fas fa-chevron-up"></i></div>
-   <!-- SVG masks -->
-   <svg class="svg-defs">
-      <clipPath id="avatar-box">
-         <path
-            d="M1.85379 38.4859C2.9221 18.6653 18.6653 2.92275 38.4858 1.85453 56.0986.905299 77.2792 0 94 0c16.721 0 37.901.905299 55.514 1.85453 19.821 1.06822 35.564 16.81077 36.632 36.63137C187.095 56.0922 188 77.267 188 94c0 16.733-.905 37.908-1.854 55.514-1.068 19.821-16.811 35.563-36.632 36.631C131.901 187.095 110.721 188 94 188c-16.7208 0-37.9014-.905-55.5142-1.855-19.8205-1.068-35.5637-16.81-36.63201-36.631C.904831 131.908 0 110.733 0 94c0-16.733.904831-37.9078 1.85379-55.5141z" />
-      </clipPath>
-      <clipPath id="avatar-hexagon">
-         <path
-            d="M0 27.2891c0-4.6662 2.4889-8.976 6.52491-11.2986L31.308 1.72845c3.98-2.290382 8.8697-2.305446 12.8637-.03963l25.234 14.31558C73.4807 18.3162 76 22.6478 76 27.3426V56.684c0 4.6805-2.5041 9.0013-6.5597 11.3186L44.4317 82.2915c-3.9869 2.278-8.8765 2.278-12.8634 0L6.55974 68.0026C2.50414 65.6853 0 61.3645 0 56.684V27.2891z" />
-      </clipPath>
-   </svg>
+   <button type="button" class="back-to-top panel" aria-label="Back to top"><i class="fas fa-chevron-up" aria-hidden="true"></i></button>
    <!-- JavaScripts -->
    <script src="assets/js/jquery-3.4.1.min.js"></script>
    <script src="assets/js/plugins.min.js"></script>
@@ -264,18 +224,22 @@
          const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                if (entry.isIntersecting) {
-                  entry.target.classList.add('active');
+                  const staggerIndex = Number(entry.target.dataset.i) || 0;
+                  const staggerMs = staggerIndex * 60;
+                  setTimeout(() => entry.target.classList.add('active'), staggerMs);
+                  observer.unobserve(entry.target);
                }
             });
          }, observerOptions);
 
+         const body = document.body;
+
          // Theme Toggle Logic
          const themeToggle = document.getElementById('themeToggle');
-         const body = document.body;
          const themeIcon = themeToggle.querySelector('i');
 
          const currentTheme = localStorage.getItem('theme') || 'dark';
-         document.documentElement.setAttribute('data-theme', currentTheme); // Use document.documentElement for global theme
+         document.documentElement.setAttribute('data-theme', currentTheme);
          updateThemeIcon(currentTheme);
 
          themeToggle.addEventListener('click', () => {
@@ -287,6 +251,9 @@
 
          function updateThemeIcon(theme) {
             themeIcon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+            themeIcon.setAttribute('aria-hidden', 'true');
+            themeToggle.setAttribute('aria-pressed', theme === 'light' ? 'true' : 'false');
+            themeToggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
          }
 
          // Mobile Menu Toggle Logic
@@ -295,10 +262,11 @@
          const menuIcon = menuToggle.querySelector('i');
 
          menuToggle.addEventListener('click', () => {
-            navList.classList.toggle('active');
+            const isOpen = navList.classList.toggle('active');
             menuIcon.classList.toggle('fa-bars');
             menuIcon.classList.toggle('fa-times');
             body.classList.toggle('menu-open'); // Prevent scrolling when menu is open
+            menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
          });
 
          // Close menu when a link is clicked
@@ -308,6 +276,7 @@
                menuIcon.classList.add('fa-bars');
                menuIcon.classList.remove('fa-times');
                body.classList.remove('menu-open');
+               menuToggle.setAttribute('aria-expanded', 'false');
             });
          });
 
@@ -325,19 +294,17 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
          });
 
-         // Smooth Scroll for Nav Links
-         document.querySelectorAll('.nav-link').forEach(link => {
+         // Smooth Scroll for In-Page Links
+         document.querySelectorAll('a[href^="#"]').forEach(link => {
             link.addEventListener('click', (e) => {
                const href = link.getAttribute('href');
-               if (href.startsWith('#')) {
+               const target = href.length > 1 ? document.querySelector(href) : null;
+               if (target) {
                   e.preventDefault();
-                  const target = document.querySelector(href);
-                  if (target) {
-                     window.scrollTo({
-                        top: target.offsetTop - 100,
-                        behavior: 'smooth'
-                     });
-                  }
+                  window.scrollTo({
+                     top: target.offsetTop - 100,
+                     behavior: 'smooth'
+                  });
                }
             });
          });
@@ -345,29 +312,29 @@
          // Project Card Generation
          function buildProjectPoints(description) {
             return description
-               .replace(/<br\s*\/?>/gi, '\n')
-               .replace(/•/g, '\n•')
-               .split('\n')
-               .map(line => line.replace(/^•\s*/, '').trim())
+               .replace(/<br\s*\/?>/gi, ' ')
+               .replace(/\s+/g, ' ')
+               .split('•')
+               .map(point => point.trim())
                .filter(Boolean)
                .slice(0, 4)
                .map(point => `<li>${point}</li>`)
                .join('');
          }
 
-         function generateProjectCard({ imageSrc, projectTitle, description, link }) {
+         function generateProjectCard({ imageSrc, projectTitle, description, link }, index) {
             const linksHtml = link ? Object.keys(link).map(p =>
-               `<a href="${link[p]}" target="_blank" rel="noopener noreferrer" class="project-card-link">
-                  <i class="${p.toLowerCase().includes('github') ? 'fab fa-github' : 'fas fa-external-link-alt'}"></i> ${p.replace("_", " ")}
+               `<a href="${link[p]}" target="_blank" rel="noopener noreferrer" class="project-card-link" aria-label="${p.replace("_", " ")}: ${projectTitle} (opens in a new tab)">
+                  <i class="${p.toLowerCase().includes('github') ? 'fab fa-github' : 'fas fa-external-link-alt'}" aria-hidden="true"></i> ${p.replace("_", " ")}
                </a>`
             ).join('') : '';
             const pointsHtml = buildProjectPoints(description);
 
             return `
-               <div class="project-card glass reveal">
+               <div class="project-card panel reveal" data-i="${index}">
                   <div class="project-card-media">
                      <div class="project-img-wrapper">
-                        <img src="${imageSrc}" alt="${projectTitle}">
+                        <img src="${imageSrc}" alt="">
                      </div>
                   </div>
                   <div class="project-card-content">
@@ -392,100 +359,150 @@
             </div>
          `;
 
+         // Footer Year
+         document.getElementById('footerYear').textContent = new Date().getFullYear();
+
+         // Populate Hero Experience Badge
+         document.getElementById('heroYearsDesc').textContent = CV.experienceYears;
+
          // Populate About Me
          $("#aboutMe").append(CV.aboutMe);
 
-         // Populate Experience
-         const experienceHtml = CV.companies.map(company => {
-            const companyTheme = company.themeClass?.text || "";
-            let itemHtml = `
-               <article class="timeline-item glass" data-company-theme="${companyTheme}" onclick="openWebsite('${company.website}')">
-                  <div class="timeline-dot"></div>
-                  <h4 class="timeline-title ${flags.applyTheme && document.documentElement.getAttribute('data-theme') !== "dark" ? company.themeClass?.text : ""}">${company.name}</h4>
-                  <p class="timeline-org">${company.address}</p>
+         // Populate About Stats
+         const experienceYears = CV.experienceYears;
+         const stats = [
+            { label: 'Experience', count: experienceYears, suffix: ' Yrs' },
+            { label: 'Companies', count: CV.companies.length, suffix: '', pad: 2 },
+            { label: 'Projects Shipped', count: CV.projectsShipped, suffix: '+' },
+            { label: 'Core Stack', chips: CV.coreStack }
+         ];
+         const statsHtml = stats.map(stat => {
+            const value = stat.chips
+               ? `<div class="stat-chips">${stat.chips.map(v => `<span>${v}</span>`).join('')}</div>`
+               : '0';
+            const countAttrs = stat.count !== undefined
+               ? ` data-count="${stat.count}" data-suffix="${stat.suffix}" data-pad="${stat.pad || 0}"`
+               : '';
+            return `
+               <div class="stat-row">
+                  <dt>${stat.label}</dt>
+                  <dd${countAttrs}>${value}</dd>
+               </div>
             `;
-            itemHtml += company.details.map(pos => generateExperienceItem(pos)).join("") + "</article>";
+         }).join('');
+         $('#aboutStats').append(statsHtml);
+
+         // Count-up animation for numeric stats
+         const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+         const countObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+               if (!entry.isIntersecting) return;
+               const el = entry.target;
+               const target = parseFloat(el.dataset.count);
+               const suffix = el.dataset.suffix || '';
+               const pad = parseInt(el.dataset.pad, 10) || 0;
+               const isDecimal = target % 1 !== 0;
+
+               if (reduceMotion) {
+                  el.textContent = `${isDecimal ? target.toFixed(1) : String(target).padStart(pad, '0')}${suffix}`;
+               } else {
+                  const duration = 900;
+                  const start = performance.now();
+                  const tick = (now) => {
+                     const progress = Math.min((now - start) / duration, 1);
+                     const eased = 1 - Math.pow(1 - progress, 3);
+                     const current = target * eased;
+                     const display = isDecimal ? current.toFixed(1) : String(Math.round(current)).padStart(pad, '0');
+                     el.textContent = `${display}${suffix}`;
+                     if (progress < 1) requestAnimationFrame(tick);
+                  };
+                  requestAnimationFrame(tick);
+               }
+               countObserver.unobserve(el);
+            });
+         }, { threshold: 0.4 });
+         document.querySelectorAll('#aboutStats dd[data-count]').forEach(el => countObserver.observe(el));
+
+         // Cursor-tracked spotlight glow on glass cards
+         document.addEventListener('pointermove', (e) => {
+            const card = e.target.closest('.project-card, .timeline-item');
+            if (!card) return;
+            const rect = card.getBoundingClientRect();
+            card.style.setProperty('--mx', `${e.clientX - rect.left}px`);
+            card.style.setProperty('--my', `${e.clientY - rect.top}px`);
+         });
+
+         // Populate Experience
+         const experienceHtml = CV.companies.map((company, index) => {
+            const companyTheme = company.themeClass?.text || "";
+            const logoHtml = company.logo
+               ? `<img src="${company.logo}" alt="" class="company-logo" loading="lazy">`
+               : '';
+            let itemHtml = `
+               <a class="timeline-item reveal" data-i="${index}" data-company-theme="${companyTheme}" href="${company.website}" target="_blank" rel="noopener noreferrer">
+                  <div class="timeline-dot" aria-hidden="true"></div>
+                  <div class="timeline-header">
+                     ${logoHtml}
+                     <div>
+                        <h4 class="timeline-title">${company.name}<span class="visually-hidden"> (opens company website in a new tab)</span></h4>
+                        <p class="timeline-org">${company.address}</p>
+                     </div>
+                  </div>
+            `;
+            itemHtml += company.details.map(pos => generateExperienceItem(pos)).join("") + "</a>";
             return itemHtml;
          }).join("");
 
          $("#ListOfCompanies").append(experienceHtml);
 
          // Populate Projects
-         projects.forEach(project => {
-            $('#projectContent').append(generateProjectCard(project));
-         });
-
-         // Custom Cursor Logic
-         const cursor = document.getElementById('customCursor');
-         let mouseX = 0, mouseY = 0;
-         let cursorX = 0, cursorY = 0;
-
-         window.addEventListener('mousemove', (e) => {
-            mouseX = e.clientX;
-            mouseY = e.clientY;
-         });
-
-         const animateCursor = () => {
-            const distX = mouseX - cursorX;
-            const distY = mouseY - cursorY;
-
-            cursorX += distX * 0.15;
-            cursorY += distY * 0.15;
-
-            cursor.style.transform = `translate3d(${cursorX - 10}px, ${cursorY - 10}px, 0)`;
-            requestAnimationFrame(animateCursor);
-         };
-         animateCursor();
-
-         // Add hover state to cursor
-         document.querySelectorAll('a, button, .project-card, .bento-item').forEach(el => {
-            el.addEventListener('mouseenter', () => {
-               cursor.style.transform += ' scale(2)';
-               cursor.style.backgroundColor = 'rgba(37, 99, 235, 0.18)';
-               cursor.style.border = 'none';
-            });
-            el.addEventListener('mouseleave', () => {
-               cursor.style.backgroundColor = 'transparent';
-               cursor.style.border = '2px solid var(--clr-primary)';
-            });
-         });
-
-         // Magnetic Button Effect
-         document.querySelectorAll('.btn').forEach(btn => {
-            btn.addEventListener('mousemove', (e) => {
-               const rect = btn.getBoundingClientRect();
-               const x = e.clientX - rect.left - rect.width / 2;
-               const y = e.clientY - rect.top - rect.height / 2;
-
-               btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
-            });
-
-            btn.addEventListener('mouseleave', () => {
-               btn.style.transform = '';
-            });
+         projects.forEach((project, index) => {
+            $('#projectContent').append(generateProjectCard(project, index));
          });
 
          // Initialize Reveal Observer
          document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-      });
+         // Scroll-linked parallax: text drifts as it moves through the viewport
+         const parallaxTitleEls = document.querySelectorAll('.hero-title');
+         const parallaxHeadingEls = document.querySelectorAll('.section-title');
+         const reduceMotionParallax = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-      function openWebsite(url) {
-         window.open(url.startsWith('http') ? url : `https://${url}`, "_blank");
-      }
+         if (!reduceMotionParallax) {
+            let parallaxTicking = false;
 
-      function pronounceName() {
-         if (!("speechSynthesis" in window)) {
-            return;
+            const updateParallax = () => {
+               const vh = window.innerHeight;
+
+               parallaxTitleEls.forEach(el => {
+                  const rect = el.getBoundingClientRect();
+                  const progress = ((rect.top + rect.height / 2) - vh / 2) / vh;
+                  const clamped = Math.max(-1, Math.min(1, progress));
+                  el.style.setProperty('--parallax-x', `${clamped * -36}px`);
+               });
+
+               parallaxHeadingEls.forEach(el => {
+                  const rect = el.getBoundingClientRect();
+                  const progress = ((rect.top + rect.height / 2) - vh / 2) / vh;
+                  const clamped = Math.max(-1, Math.min(1, progress));
+                  el.style.setProperty('--parallax-y', `${clamped * -24}px`);
+               });
+
+               parallaxTicking = false;
+            };
+
+            const requestParallaxUpdate = () => {
+               if (!parallaxTicking) {
+                  requestAnimationFrame(updateParallax);
+                  parallaxTicking = true;
+               }
+            };
+
+            window.addEventListener('scroll', requestParallaxUpdate, { passive: true });
+            requestParallaxUpdate();
          }
 
-         window.speechSynthesis.cancel();
-         const utterance = new SpeechSynthesisUtterance("Vinayak Revankar");
-         utterance.lang = "en-IN";
-         utterance.rate = 0.95;
-         utterance.pitch = 1;
-         window.speechSynthesis.speak(utterance);
-      }
+      });
    </script>
 </body>
 
