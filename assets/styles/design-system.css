@@ -4,9 +4,9 @@
     /* Color Palette - black + heavy glass transparency, vibrant gradient accent */
     --clr-bg: #050505;
     --clr-bg-alt: #0d0d0d;
-    --clr-primary: #a78bfa;
-    --clr-primary-light: #c4b5fd;
-    --clr-accent: #a78bfa;
+    --clr-primary: #2e5cff;
+    --clr-primary-light: #5c7fff;
+    --clr-accent: #2e5cff;
     --clr-surface: rgba(255, 255, 255, 0.03);
     --clr-surface-hover: rgba(255, 255, 255, 0.06);
     --clr-text: #f2f0ec;
@@ -43,9 +43,9 @@
 [data-theme="light"] {
     --clr-bg: #f7f7f7;
     --clr-bg-alt: #ececec;
-    --clr-primary: #7c3aed;
-    --clr-primary-light: #8b5cf6;
-    --clr-accent: #7c3aed;
+    --clr-primary: #1a3fd6;
+    --clr-primary-light: #2e5cff;
+    --clr-accent: #1a3fd6;
     --clr-surface: rgba(20, 20, 20, 0.03);
     --clr-surface-hover: rgba(20, 20, 20, 0.05);
     --clr-text: #141414;
