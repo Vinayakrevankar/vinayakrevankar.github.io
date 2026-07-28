@@ -94,13 +94,14 @@
    <main id="main-content">
       <!-- Hero Section -->
       <section class="hero-section" id="hero">
+        <div class="hero-sticky">
          <div class="container hero-content reveal">
             <h1 class="hero-title"><span class="title-line">Vinayak</span><span class="title-line">Revankar</span></h1>
             <div class="hero-lower">
                <div class="hero-text">
                   <p class="hero-description">
                      Meticulous and action-oriented developer with <span id="heroYearsDesc">6</span> years of experience. I build scalable, reliable
-                     software applications and lead high-performing teams.
+                     web and mobile applications, including cross-platform app development with React Native, and lead high-performing teams.
                   </p>
                   <div class="hero-actions">
                      <a href="mailto:vinayakanrevankar@gmail.com" class="btn btn-primary">Get in Touch</a>
@@ -126,6 +127,7 @@
             <div class="scroll-line"></div>
             <span>Scroll</span>
          </div>
+        </div>
       </section>
 
       <section class="about-section section" id="about">
@@ -423,13 +425,22 @@
          }, { threshold: 0.4 });
          document.querySelectorAll('#aboutStats dd[data-count]').forEach(el => countObserver.observe(el));
 
-         // Cursor-tracked spotlight glow on glass cards
+         // Cursor-tracked spotlight glow + 3D tilt on glass cards
          document.addEventListener('pointermove', (e) => {
             const card = e.target.closest('.project-card, .timeline-item');
             if (!card) return;
             const rect = card.getBoundingClientRect();
-            card.style.setProperty('--mx', `${e.clientX - rect.left}px`);
-            card.style.setProperty('--my', `${e.clientY - rect.top}px`);
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            card.style.setProperty('--mx', `${x}px`);
+            card.style.setProperty('--my', `${y}px`);
+
+            if (card.classList.contains('project-card')) {
+               const px = x / rect.width - 0.5;
+               const py = y / rect.height - 0.5;
+               card.style.setProperty('--rx', `${px * 12}deg`);
+               card.style.setProperty('--ry', `${py * -10}deg`);
+            }
          });
 
          // Populate Experience
@@ -463,8 +474,10 @@
          // Initialize Reveal Observer
          document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-         // Scroll-linked parallax: text drifts as it moves through the viewport
-         const parallaxTitleEls = document.querySelectorAll('.hero-title');
+         // Scroll-linked motion: Apple-style pinned hero (shrinks + fades while pinned),
+         // and section headings drift as they pass through the viewport.
+         const heroSection = document.querySelector('.hero-section');
+         const heroContent = document.querySelector('.hero-content');
          const parallaxHeadingEls = document.querySelectorAll('.section-title');
          const reduceMotionParallax = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -474,12 +487,19 @@
             const updateParallax = () => {
                const vh = window.innerHeight;
 
-               parallaxTitleEls.forEach(el => {
-                  const rect = el.getBoundingClientRect();
-                  const progress = ((rect.top + rect.height / 2) - vh / 2) / vh;
-                  const clamped = Math.max(-1, Math.min(1, progress));
-                  el.style.setProperty('--parallax-x', `${clamped * -36}px`);
-               });
+               if (heroSection && heroContent) {
+                  const pinDistance = heroSection.offsetHeight - vh;
+                  const scrolled = Math.min(Math.max(-heroSection.getBoundingClientRect().top, 0), pinDistance);
+                  const progress = pinDistance > 0 ? scrolled / pinDistance : 0;
+                  if (progress > 0) {
+                     const scale = 1 - progress * 0.18;
+                     heroContent.style.transform = `scale(${scale})`;
+                     heroContent.style.opacity = `${Math.max(0, 1 - progress * 1.15)}`;
+                  } else {
+                     heroContent.style.transform = '';
+                     heroContent.style.opacity = '';
+                  }
+               }
 
                parallaxHeadingEls.forEach(el => {
                   const rect = el.getBoundingClientRect();

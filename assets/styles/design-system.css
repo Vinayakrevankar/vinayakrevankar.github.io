@@ -266,13 +266,13 @@ button:focus-visible,
 /* Base Animations */
 .reveal {
     opacity: 0;
-    transform: translateY(22px);
+    transform: translateY(28px) scale(0.97);
     transition: all 0.8s cubic-bezier(0.2, 1, 0.3, 1);
 }
 
 .reveal.active {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
 }
 
 /* Header & Nav */
@@ -418,20 +418,40 @@ button:focus-visible,
     color: var(--clr-primary);
 }
 
-/* Hero Section */
+/* Hero Section - pinned/scrubbed like Apple product pages: content stays fixed
+   on screen and shrinks/fades while you scroll through it, then releases. */
 .hero-section {
     position: relative;
     isolation: isolate;
-    min-height: 100vh;
+    min-height: 180vh;
+}
+
+.hero-sticky {
+    position: sticky;
+    top: 0;
+    height: 100vh;
     display: flex;
     align-items: center;
     padding-top: 96px;
+    overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-section {
+        min-height: 100vh;
+    }
+
+    .hero-sticky {
+        position: static;
+        height: auto;
+    }
 }
 
 .hero-content {
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
+    will-change: transform, opacity;
 }
 
 .hero-title {
@@ -441,8 +461,6 @@ button:focus-visible,
     letter-spacing: -0.02em;
     margin-bottom: 0;
     overflow: hidden;
-    transform: translateX(var(--parallax-x, 0px));
-    will-change: transform;
 }
 
 .title-line {
@@ -959,6 +977,7 @@ a.timeline-item:hover::after {
     gap: 1.25rem;
     max-width: 900px;
     margin: 0 auto;
+    perspective: 1400px;
 }
 
 .project-card {
@@ -976,7 +995,15 @@ a.timeline-item:hover::after {
     box-shadow: var(--glass-shadow);
     backdrop-filter: var(--glass-blur);
     -webkit-backdrop-filter: var(--glass-blur);
-    transition: transform var(--transition-bounce), border-color var(--transition-base), box-shadow var(--transition-base);
+    transition: transform var(--transition-bounce), opacity 0.6s ease, border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+/* World-class entrance: cards tilt up into place out of 3D space as they scroll into view.
+   :not(.active) makes this rule stop matching entirely once revealed, so it can never
+   compete with .project-card:hover's tilt transform after that point. */
+.project-card.reveal:not(.active) {
+    transform: translateY(40px) scale(0.94) rotateX(10deg);
+    transform-origin: bottom center;
 }
 
 .project-card::after {
@@ -992,7 +1019,7 @@ a.timeline-item:hover::after {
 }
 
 .project-card:hover {
-    transform: translateY(-3px);
+    transform: translateY(-6px) scale(1.015) perspective(900px) rotateX(var(--ry, 0deg)) rotateY(var(--rx, 0deg));
     border-color: var(--clr-primary);
 }
 

@@ -233,10 +233,10 @@ const CV = {
       list: ' Agile / Scrum, Test-Driven Development, CI/CD, Infrastructure as Code'
     }
   ],
-  "coreStack": ['TypeScript', 'Node.js', 'AWS', 'React'],
+  "coreStack": ['TypeScript', 'Node.js', 'AWS', 'React', 'React Native'],
   "projectsShipped": 40
 }
 
 CV.experienceYears = calculateExperience(CV.companies);
-aboutMe = `Meticulous and action-oriented Software Engineer with ${CV.experienceYears} years of experience in building scalable and reliable applications. I specialize in architecting robust solutions, leading high-performing development teams, and streamlining workflows through innovative internal tools. My technical expertise spans across various modern frameworks and cloud platforms, driven by a passion for clean code and efficient communication.`
+aboutMe = `Meticulous and action-oriented Software Engineer with ${CV.experienceYears} years of experience in building scalable and reliable web and mobile applications, including cross-platform app development with React Native. I specialize in architecting robust solutions, leading high-performing development teams, and streamlining workflows through innovative internal tools. My technical expertise spans across various modern frameworks and cloud platforms, driven by a passion for clean code and efficient communication.`
 CV.aboutMe = aboutMe
