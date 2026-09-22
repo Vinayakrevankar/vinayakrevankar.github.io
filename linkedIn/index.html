@@ -11,7 +11,7 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-YQVTZNMRY7');
+    gtag('config', 'G-YQVTZNMRY7', { 'transport_type': 'beacon' });
 
     var destination = "https://in.linkedin.com/in/vinayakrevankar";
     var redirected = false;
@@ -24,12 +24,12 @@
     gtag('event', 'link_redirect', {
       'link_name': 'linkedin',
       'destination_url': destination,
-      'event_callback': goToDestination,
-      'event_timeout': 1000
+      'transport_type': 'beacon',
+      'event_callback': goToDestination
     });
 
-    // Fallback in case gtag doesn't load/callback in time
-    setTimeout(goToDestination, 1000);
+    // Beacon is queued synchronously, so a short fallback is enough
+    setTimeout(goToDestination, 150);
   </script>
 </head>
 <body>
