@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting to GitHub…</title>
+  <link rel="canonical" href="https://github.com/Vinayakrevankar">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YQVTZNMRY7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YQVTZNMRY7');
+
+    var destination = "https://github.com/Vinayakrevankar";
+    var redirected = false;
+    function goToDestination() {
+      if (redirected) return;
+      redirected = true;
+      window.location.replace(destination);
+    }
+
+    gtag('event', 'link_redirect', {
+      'link_name': 'github',
+      'destination_url': destination,
+      'event_callback': goToDestination,
+      'event_timeout': 1000
+    });
+
+    // Fallback in case gtag doesn't load/callback in time
+    setTimeout(goToDestination, 1000);
+  </script>
+</head>
+<body>
+  <p>Redirecting to <a href="https://github.com/Vinayakrevankar">GitHub</a>…</p>
+</body>
+</html>
