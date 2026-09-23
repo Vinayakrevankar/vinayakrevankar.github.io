@@ -233,7 +233,7 @@ const CV = {
       list: ' Agile / Scrum, Test-Driven Development, CI/CD, Infrastructure as Code'
     }
   ],
-  "coreStack": ['TypeScript', 'Node.js', 'AWS', 'React', 'React Native'],
+  "coreStack": ['TypeScript', 'Node.js', 'AWS', 'React', 'React Native', 'Python', 'C#', 'Java', 'Go', 'DynamoDB'],
   "projectsShipped": 40
 }
 
