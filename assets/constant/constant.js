@@ -94,7 +94,7 @@ const CV = {
       "name": "Skillz Platform Inc.",
       "address": "Las Vegas, NV, United States",
       "details": [{
-        "role": "Associate Software Engineer, Fullstack",
+        "role": "Software Engineer, Fullstack",
         "duration": "JAN 2026 — PRESENT",
         "startDate": "2026-01-05",
         "endDate": "PRESENT",
